@@ -1,0 +1,24 @@
+---
+import sourceManifest from '../../data/source-manifest.generated.json';
+
+const { refs = [], compact = false } = Astro.props;
+const sourcesByPath = new Map(sourceManifest.sources.map((source) => [source.path, source]));
+const safeRefs = Array.isArray(refs) ? refs : [];
+function fallbackSource(path: string) {
+  return { title: path, path, tier: 'unknown', kind: 'source', canonicalUrl: null };
+}
+---
+
+<ul class:list={["source-ref-list", compact && "compact"]}>
+  {safeRefs.map((ref) => {
+    const source = sourcesByPath.get(ref.path) || fallbackSource(ref.path);
+    return (
+      <li data-source-ref={source.path}>
+        <span class="source-title">{source.title}</span>
+        <span class="source-meta">{source.tier || 'unknown'} · {source.kind || 'source'}</span>
+        <code>{source.path}</code>
+        {source.canonicalUrl && <a href={source.canonicalUrl}>canonical</a>}
+      </li>
+    );
+  })}
+</ul>

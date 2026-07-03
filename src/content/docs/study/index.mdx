@@ -1,0 +1,27 @@
+---
+title: "Interactive Study"
+description: "Flashcards, flow steps, and quizzes for PCC Atlas."
+---
+
+
+import DiagramFrame from '../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../components/study/Quiz.svelte';
+
+
+
+# Interactive Study
+
+Use the study widgets to rehearse the architecture boundary, request flow, attestation, and transparency differences. Each answer exposes a source path, so the exercise remains evidence-backed instead of becoming memorization without provenance.
+
+<FlowStepper project="all" client:only="svelte" />
+<StudyCards project="all" client:only="svelte" />
+<Quiz project="cross-vendor" client:only="svelte" />
+

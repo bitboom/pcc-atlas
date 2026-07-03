@@ -1,0 +1,27 @@
+---
+title: "Architecture Boundary"
+description: "Where each private AI system processes sensitive data."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Architecture Boundary
+
+The architecture boundary is the place where sensitive data becomes readable for computation. Apple and Meta emphasize protected cloud execution boundaries; Google emphasizes an on-device boundary first and separates its Oak sealed-computing path.
+
+<DiagramFrame diagramId="comparison-request-flow" />
+<ComparisonMatrix claimIds={["apple-trust-boundary", "meta-trust-boundary", "google-trust-boundary", "comparison-boundary", "google-non-targetability-unknown"]} />
+<Quiz project="cross-vendor" client:only="svelte" />
+

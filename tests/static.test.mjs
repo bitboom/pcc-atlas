@@ -46,14 +46,15 @@ test('publishable source files do not contain local absolute paths or secret ass
 
 test('generated docs include homepage, projects, comparisons, concepts, and evidence explorer', () => {
   const required = [
-    'src/content/docs/index.md',
-    'src/content/docs/projects/apple/index.md',
-    'src/content/docs/projects/meta/index.md',
-    'src/content/docs/projects/google/index.md',
-    'src/content/docs/compare/architecture-boundary/index.md',
-    'src/content/docs/compare/transparency-and-verifiability/index.md',
-    'src/content/docs/concepts/remote-attestation/index.md',
-    'src/content/docs/evidence/index.md'
+    'src/content/docs/index.mdx',
+    'src/content/docs/projects/apple/index.mdx',
+    'src/content/docs/projects/meta/index.mdx',
+    'src/content/docs/projects/google/index.mdx',
+    'src/content/docs/compare/architecture-boundary/index.mdx',
+    'src/content/docs/compare/transparency-and-verifiability/index.mdx',
+    'src/content/docs/concepts/remote-attestation/index.mdx',
+    'src/content/docs/evidence/index.mdx',
+    'src/content/docs/study/index.mdx'
   ];
   for (const file of required) assert.equal(existsSync(join(root, file)), true, file);
 });

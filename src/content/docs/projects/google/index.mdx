@@ -1,0 +1,38 @@
+---
+title: "Google Private AI / Private Compute Core / Project Oak"
+description: "Google Private AI / Private Compute Core / Project Oak diagram-first overview."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Google Private AI / Private Compute Core / Project Oak
+
+Google Private AI is on-device-first for sensitive Android features through Private Compute Core and Private Compute Services. Project Oak is a separate sealed-computing cloud path for attestable enclave applications.
+
+<TrustBoundaryDiagram diagramId="google-system-map" />
+
+<AttestationPipelineDiagram diagramId="google-oak-transparency" />
+
+## Source-backed design claims
+
+<ClaimCard claimId="google-trust-boundary" />
+<ClaimCard claimId="google-pcs-bridge" />
+<ClaimCard claimId="google-oak" />
+<ClaimCard claimId="google-non-targetability-unknown" />
+
+<CitationDrawer sourcePath="google/wiki/sources/google-private-ai/google_private-compute-services.md" label="Inspect primary source" client:only="svelte" />
+<FlowStepper project="google" client:only="svelte" />
+<StudyCards project="google" client:only="svelte" />
+

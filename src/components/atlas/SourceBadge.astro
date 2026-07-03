@@ -1,0 +1,4 @@
+---
+const { sourcePath, label = 'Source-backed' } = Astro.props;
+---
+<span class="source-badge" data-source-ref={sourcePath}>{label}</span>

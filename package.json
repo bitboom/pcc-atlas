@@ -11,11 +11,20 @@
     "build:ci": "astro build",
     "dev": "astro dev",
     "preview": "astro preview --host 127.0.0.1",
+    "check:astro": "astro check",
+    "qa:site": "node scripts/qa-site.mjs",
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "latest",
     "@astrojs/starlight": "latest",
-    "astro": "latest"
+    "@astrojs/svelte": "latest",
+    "astro": "latest",
+    "svelte": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "@playwright/test": "latest",
+    "typescript": "latest"
+  }
 }

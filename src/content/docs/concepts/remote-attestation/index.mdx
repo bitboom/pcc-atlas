@@ -1,0 +1,26 @@
+---
+title: "Remote Attestation"
+description: "How clients verify what code and hardware they are talking to."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Remote Attestation
+
+How clients verify what code and hardware they are talking to.
+
+<ClaimCard claimId="meta-attested-session" />
+<CitationDrawer sourcePath="cross-vendor/wiki/concepts/remote-attestation.md" client:only="svelte" />
+

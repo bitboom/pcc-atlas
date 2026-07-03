@@ -1,0 +1,223 @@
+{
+  "pccRefCommit": "4baf997394629ad6e39790e38ede3a7768fa2f35",
+  "generatedAt": "2026-07-03T11:10:20.518Z",
+  "claims": [
+    {
+      "id": "apple-trust-boundary",
+      "project": "apple",
+      "title": "Apple trust boundary",
+      "summary": "Apple PCC places the sensitive-data boundary inside custom Apple-silicon PCC compute nodes; load balancers and privacy gateways stay outside that boundary.",
+      "sourceRefs": [
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+          "label": "statelessandenforcable"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/apple-private-cloud-compute.md",
+          "label": "apple-private-cloud-compute"
+        }
+      ]
+    },
+    {
+      "id": "apple-stateless",
+      "project": "apple",
+      "title": "Stateless computation",
+      "summary": "PCC is designed to use personal data only for the request and not retain it after the response; Ephemeral Data Mode and request-data lifecycle controls support this guarantee.",
+      "sourceRefs": [
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/corerequirements.md",
+          "label": "corerequirements"
+        },
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+          "label": "statelessandenforcable"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/stateless-inference.md",
+          "label": "stateless-inference"
+        }
+      ]
+    },
+    {
+      "id": "apple-transparency",
+      "project": "apple",
+      "title": "Production image transparency",
+      "summary": "Apple ties device trust to public software measurements, production images, and researcher verification tooling rather than to hidden operational trust.",
+      "sourceRefs": [
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+          "label": "verifiabletransparency"
+        },
+        {
+          "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+          "label": "transparency-and-verifiability"
+        }
+      ]
+    },
+    {
+      "id": "meta-trust-boundary",
+      "project": "meta",
+      "title": "Meta trust boundary",
+      "summary": "Meta Private Processing places WhatsApp AI work inside a confidential virtual machine / TEE reached through anonymous routing and attested encrypted sessions.",
+      "sourceRefs": [
+        {
+          "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+          "label": "whatsapp-private-processing-ai-tools"
+        },
+        {
+          "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+          "label": "private-processing-technical-whitepaper"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/meta-private-processing.md",
+          "label": "meta-private-processing"
+        }
+      ]
+    },
+    {
+      "id": "meta-attested-session",
+      "project": "meta",
+      "title": "RA-TLS session setup",
+      "summary": "Meta describes client-server setup around remote attestation, acceptable binary logs, and encrypted communication before user data is processed.",
+      "sourceRefs": [
+        {
+          "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+          "label": "private-processing-technical-whitepaper"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/remote-attestation.md",
+          "label": "remote-attestation"
+        }
+      ]
+    },
+    {
+      "id": "meta-transparency",
+      "project": "meta",
+      "title": "Artifact transparency",
+      "summary": "Meta frames enforceable guarantees around public discoverability, artifact transparency, researcher verification, and third-party review paths.",
+      "sourceRefs": [
+        {
+          "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+          "label": "whatsapp-private-processing-ai-tools"
+        },
+        {
+          "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+          "label": "private-processing-technical-whitepaper"
+        },
+        {
+          "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+          "label": "transparency-and-verifiability"
+        }
+      ]
+    },
+    {
+      "id": "google-trust-boundary",
+      "project": "google",
+      "title": "Google on-device boundary",
+      "summary": "Google Private AI starts with Android Private Compute Core as an isolated on-device environment for sensitive features, with network access mediated by Private Compute Services.",
+      "sourceRefs": [
+        {
+          "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+          "label": "android-private-ai-approach"
+        },
+        {
+          "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+          "label": "google_private-compute-services"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/google-private-compute-core.md",
+          "label": "google-private-compute-core"
+        }
+      ]
+    },
+    {
+      "id": "google-pcs-bridge",
+      "project": "google",
+      "title": "Private Compute Services bridge",
+      "summary": "Private Compute Services is the privacy-preserving bridge for Private Compute Core features, including PIR, federated compute, HTTP downloads, and protected downloads.",
+      "sourceRefs": [
+        {
+          "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+          "label": "google_private-compute-services"
+        },
+        {
+          "path": "google/wiki/sources/google-private-ai/introducing-androids-private-compute.md",
+          "label": "introducing-androids-private-compute"
+        }
+      ]
+    },
+    {
+      "id": "google-oak",
+      "project": "google",
+      "title": "Project Oak sealed computing",
+      "summary": "Project Oak provides open-source sealed-computing primitives for attested enclave applications, including staged measurement, endorsements, and Transparent Release paths.",
+      "sourceRefs": [
+        {
+          "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+          "label": "project-oak_oak"
+        },
+        {
+          "path": "google/wiki/sources/google-private-ai/trust-in-transparency-private-compute.md",
+          "label": "trust-in-transparency-private-compute"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/remote-attestation.md",
+          "label": "remote-attestation"
+        }
+      ]
+    },
+    {
+      "id": "comparison-boundary",
+      "project": "cross-vendor",
+      "title": "Boundary comparison",
+      "summary": "Apple and Meta emphasize protected cloud execution boundaries, while Google emphasizes on-device isolation first and separates its Oak sealed-computing cloud path.",
+      "sourceRefs": [
+        {
+          "path": "cross-vendor/wiki/comparisons/architecture-boundary.md",
+          "label": "architecture-boundary"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/apple-private-cloud-compute.md",
+          "label": "apple-private-cloud-compute"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/meta-private-processing.md",
+          "label": "meta-private-processing"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/google-private-compute-core.md",
+          "label": "google-private-compute-core"
+        }
+      ]
+    },
+    {
+      "id": "comparison-transparency",
+      "project": "cross-vendor",
+      "title": "Transparency comparison",
+      "summary": "The three systems expose different transparency surfaces: Apple production images and VRE, Meta artifact/CVM verification, and Google open source, reproducible builds, binary transparency, and Rekor/Oak release patterns.",
+      "sourceRefs": [
+        {
+          "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+          "label": "transparency-and-verifiability"
+        }
+      ]
+    },
+    {
+      "id": "google-non-targetability-unknown",
+      "project": "google",
+      "title": "Google non-targetability scope",
+      "summary": "Not documented in ingested sources",
+      "documentationStatus": "not_documented",
+      "sourceRefs": [
+        {
+          "path": "cross-vendor/wiki/concepts/non-targetability.md",
+          "label": "non-targetability"
+        },
+        {
+          "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+          "label": "android-private-ai-approach"
+        }
+      ]
+    }
+  ]
+}

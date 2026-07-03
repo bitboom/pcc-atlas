@@ -1,0 +1,37 @@
+---
+title: "Apple Private Cloud Compute"
+description: "Apple Private Cloud Compute diagram-first overview."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Apple Private Cloud Compute
+
+Apple PCC is the cloud compute path for Apple Intelligence requests that require server-side model execution. The atlas view focuses on device validation, PCC node trust boundaries, stateless processing, and public transparency evidence.
+
+<RequestFlowDiagram diagramId="apple-request-flow" />
+
+<AttestationPipelineDiagram diagramId="apple-attestation" />
+
+## Source-backed design claims
+
+<ClaimCard claimId="apple-trust-boundary" />
+<ClaimCard claimId="apple-stateless" />
+<ClaimCard claimId="apple-transparency" />
+
+<CitationDrawer sourcePath="apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md" label="Inspect primary source" client:only="svelte" />
+<FlowStepper project="apple" client:only="svelte" />
+<StudyCards project="apple" client:only="svelte" />
+

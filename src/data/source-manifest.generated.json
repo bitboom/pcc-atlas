@@ -1,0 +1,646 @@
+{
+  "pccRefCommit": "4baf997394629ad6e39790e38ede3a7768fa2f35",
+  "generatedAt": "2026-07-03T11:10:20.512Z",
+  "sources": [
+    {
+      "path": "apple/wiki/raw/methodology/boris-llm-wiki.md",
+      "title": "Boris LLM Wiki pattern",
+      "vendor": "apple",
+      "tier": "methodology",
+      "kind": "llm-wiki-pattern",
+      "canonicalUrl": "https://gist.github.com/borisush/81330ff1f2bb4e142e83fbbf17f5e2d0",
+      "sourceSha256": "dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401",
+      "sourceId": "apple-methodology-boris-llm-wiki"
+    },
+    {
+      "path": "apple/wiki/sources/apple-official-blog/expanding-pcc.md",
+      "title": "Expanding Private Cloud Compute",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "security-blog",
+      "canonicalUrl": "https://security.apple.com/blog/expanding-pcc/",
+      "sourceSha256": "8b591d5774c0c0427bf9aaf5158b24851164825cf1b7fb1fc7865ca365dc0d01",
+      "sourceId": "apple-pcc-blog-expanding-pcc"
+    },
+    {
+      "path": "apple/wiki/sources/apple-official-blog/pcc-security-research.md",
+      "title": "Security research on Private Cloud Compute",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "security-blog",
+      "canonicalUrl": "https://security.apple.com/blog/pcc-security-research/",
+      "sourceSha256": "233e9ea47ecb980da5ee1b9882c5a4ad096a1bcd6c7f1d5f8120f9408a441c4e",
+      "sourceId": "apple-pcc-blog-security-research"
+    },
+    {
+      "path": "apple/wiki/sources/apple-official-blog/private-cloud-compute.md",
+      "title": "Private Cloud Compute: A new frontier for AI privacy in the cloud",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "security-blog",
+      "canonicalUrl": "https://security.apple.com/blog/private-cloud-compute/",
+      "sourceSha256": "f4ead309193393ab3d9ef4232bedd4b39765a7b3023919a3dbd98771e0e1fc47",
+      "sourceId": "apple-pcc-blog-new-frontier-2024-06"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_appleintelligencereport.md",
+      "title": "Appendix: Apple Intelligence Report",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_appleintelligencereport",
+      "sourceSha256": "283170d41c57e042bce40795078019cff478022310df5319b7751a26d0d35eab",
+      "sourceId": "apple-private-cloud-compute-appendix_appleintelligencereport"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_attestationbundle.md",
+      "title": "Appendix: Attestation Bundle Contents",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_attestationbundle",
+      "sourceSha256": "88b430fc2244141dbc4ce50c50fb3c081ffcd7f9199058ba1d950903174dc78b",
+      "sourceId": "apple-private-cloud-compute-appendix_attestationbundle"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_secureboot.md",
+      "title": "Appendix: Secure Boot Tags",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_secureboot",
+      "sourceSha256": "e4b257b0fbb301d8d415844db6977b41f41d166607c97ceabf151e2c13c305ed",
+      "sourceId": "apple-private-cloud-compute-appendix_secureboot"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_systemconfig.md",
+      "title": "Appendix: System Configuration",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_systemconfig",
+      "sourceSha256": "b3f6e7f1113eec88d56b69d0fdb955c43c8ec7745d53cf51080a02a8a3b75ed5",
+      "sourceId": "apple-private-cloud-compute-appendix_systemconfig"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_transparencylog.md",
+      "title": "Appendix: Transparency Log",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_transparencylog",
+      "sourceSha256": "ad236bf3ddd33f3055d81ee760674395415abb9b38e987c8cfd7ceb591738331",
+      "sourceId": "apple-private-cloud-compute-appendix_transparencylog"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_trustcache.md",
+      "title": "Appendix: Trust Cache Format",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_trustcache",
+      "sourceSha256": "0452fb9f913c1ea1442995e7c4901e95c4691c7d5332bfcea02e759cb68f4660",
+      "sourceId": "apple-private-cloud-compute-appendix_trustcache"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/appendix_uniqtags.md",
+      "title": "Appendix: Secure Boot Ticket Canonicalization",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/appendix_uniqtags",
+      "sourceSha256": "b4d8799b460147ec98e7f5e44a1f8132cc9a04f3a666f5a3f7708e2309180055",
+      "sourceId": "apple-private-cloud-compute-appendix_uniqtags"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/attacks.md",
+      "title": "Anticipating Attacks",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/attacks",
+      "sourceSha256": "026765c9fd16f3d7c03b87fa6ac8e0418cef75622a446599009d4fa99680e1bd",
+      "sourceId": "apple-private-cloud-compute-attacks"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/corerequirements.md",
+      "title": "Core Security & Privacy Requirements",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/corerequirements",
+      "sourceSha256": "95ef5938488b69ad8def1e8e1b9742adc19f4c2f85c98396d183d047ee06cf03",
+      "sourceId": "apple-private-cloud-compute-corerequirements"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/hardwareintegrity.md",
+      "title": "Hardware Integrity",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/hardwareintegrity",
+      "sourceSha256": "53eea0f31642060d233c62fd9b19f9db65c809376a725096863a47e45bb48ca0",
+      "sourceId": "apple-private-cloud-compute-hardwareintegrity"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md",
+      "title": "Hardware Root of Trust",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/hardwarerootoftrust",
+      "sourceSha256": "9934062f8336cc051ed1e33c7dece2c3cfaed2cb37cf4a0331d252d4d72c78be",
+      "sourceId": "apple-private-cloud-compute-hardwarerootoftrust"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/inspectingreleases.md",
+      "title": "Inspecting Releases",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/inspectingreleases",
+      "sourceSha256": "66c6a6d8fd0d1f2156e6d7a14b33f482e538d8f1f758ca5cefb7934716a25a11",
+      "sourceId": "apple-private-cloud-compute-inspectingreleases"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/management.md",
+      "title": "Management & Operations",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/management",
+      "sourceSha256": "55ca02ed8a8d6a31f118e333204654a33d28f410a6fd7044f2a03e0e70d78ad2",
+      "sourceId": "apple-private-cloud-compute-management"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/navigation.md",
+      "title": "Navigating the Security Guide",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/navigation",
+      "sourceSha256": "e4dfe94d457ff5e5527bf94f042dd0572e72a370324b4e1f5388d85f6e4c03d3",
+      "sourceId": "apple-private-cloud-compute-navigation"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/nontargetability.md",
+      "title": "Non-Targetability",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/nontargetability",
+      "sourceSha256": "679b95aaa37f6189241a227eeb4e20282dd92cf7987051484adfe8c4fb591ce9",
+      "sourceId": "apple-private-cloud-compute-nontargetability"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/noprivilegedaccess.md",
+      "title": "No Privileged Runtime Access",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/noprivilegedaccess",
+      "sourceSha256": "15cedf5c298ac2626923564f4e5b7954026913f324a1c14dc6f54229f56669e3",
+      "sourceId": "apple-private-cloud-compute-noprivilegedaccess"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/pccagent.md",
+      "title": "PCC Agent",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/pccagent",
+      "sourceSha256": "031efd894e9f68572473a2d1e6099025047f29e5f8adb3c60993e047d9bcd126",
+      "sourceId": "apple-private-cloud-compute-pccagent"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/pir.md",
+      "title": "Private Information Retrieval",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/pir",
+      "sourceSha256": "ec0d107c9083d0b6ada0a6ed0b038bb574e3afe7e3a17d36c2e15e8228e4e426",
+      "sourceId": "apple-private-cloud-compute-pir"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/private-cloud-compute.md",
+      "title": "Private Cloud Compute Security Guide",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute",
+      "sourceSha256": "834b406c82569d949b0dc5d5afe776b682e37b3ed78cfb06fd112ffafe06b65b",
+      "sourceId": "apple-private-cloud-compute-private-cloud-compute"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/releasenotes.md",
+      "title": "Release Notes",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/releasenotes",
+      "sourceSha256": "1b468a533e50a461396d9a36c26ad08d23403230702de1522a47f4f3d7c9a61b",
+      "sourceId": "apple-private-cloud-compute-releasenotes"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/releasetransparency.md",
+      "title": "Release Transparency",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/releasetransparency",
+      "sourceSha256": "292f9b298561fed755f05256988305468c400bb7c9e442717c9b4e6aa4e4e131",
+      "sourceId": "apple-private-cloud-compute-releasetransparency"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/reportingissues.md",
+      "title": "Reporting Issues",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/reportingissues",
+      "sourceSha256": "0be6f548c9aa626629ad6b78867be2089742f4d6c7141dbcdc876b229d597b49",
+      "sourceId": "apple-private-cloud-compute-reportingissues"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+      "title": "Request Flow",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/requestflow",
+      "sourceSha256": "48af9e1daa5ec380624cb4fc2356f59ebb9aece0fdd4d98598533ff995bb7658",
+      "sourceId": "apple-private-cloud-compute-requestflow"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/requesthandling.md",
+      "title": "Attested Request Handling",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/requesthandling",
+      "sourceSha256": "068a69b0411aa8af21ebd7797410f1fe557f336351ba47b9881ad0abf08b6d16",
+      "sourceId": "apple-private-cloud-compute-requesthandling"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/runtimeconfigassets.md",
+      "title": "Runtime Configuration and Assets",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/runtimeconfigassets",
+      "sourceSha256": "6ef9191adec580f01f2f93933661c05614f6c76301a93ab184ee960b35834834",
+      "sourceId": "apple-private-cloud-compute-runtimeconfigassets"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/softwarefoundations.md",
+      "title": "Software Foundations",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/softwarefoundations",
+      "sourceSha256": "95907b14e2234df071b211804c2e28b9cce42e5ca4a734095b403f840acf07e3",
+      "sourceId": "apple-private-cloud-compute-softwarefoundations"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/softwarelayering.md",
+      "title": "Software Layering",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/softwarelayering",
+      "sourceSha256": "a4047c2ed3e5a8eb564ff380d6388222601dd331c20680cd32772a0ce19258fa",
+      "sourceId": "apple-private-cloud-compute-softwarelayering"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/sourcecode.md",
+      "title": "Source Code",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/sourcecode",
+      "sourceSha256": "66afb2922a10855b2a5744d0082dc5fb1489bf1bd1794c8926fa70ca9d8bbf14",
+      "sourceId": "apple-private-cloud-compute-sourcecode"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+      "title": "Stateless Computation and Enforceable Guarantees",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/statelessandenforcable",
+      "sourceSha256": "b0956ca94bc7da0ff9f852a74ac3ea9a1fc434e4afeee24b1b0728ab2ef8544a",
+      "sourceId": "apple-private-cloud-compute-statelessandenforcable"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/statelessinference.md",
+      "title": "Stateless Inference",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/statelessinference",
+      "sourceSha256": "7947122ec4642d2ecfa9be94ebfd2707bfa55026bec98b508ddbd6db508ad02a",
+      "sourceId": "apple-private-cloud-compute-statelessinference"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/transitivetrust.md",
+      "title": "Transitive Trust",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/transitivetrust",
+      "sourceSha256": "06b54612e3cfc429d94c378aeca686df9648a7fc55a9a36600522063a1d1fba6",
+      "sourceId": "apple-private-cloud-compute-transitivetrust"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+      "title": "Verifiable Transparency",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/verifiabletransparency",
+      "sourceSha256": "e6edade6602f7b7d1c57493ab59d6188126c883733fd444e88cd6a6010c34808",
+      "sourceId": "apple-private-cloud-compute-verifiabletransparency"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/virtualresearchenvironment.md",
+      "title": "Virtual Research Environment",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/virtualresearchenvironment",
+      "sourceSha256": "d8bac4c40a7060d43aca5d4d789236e8dd2845644a5f22718bfddf65c277faa2",
+      "sourceId": "apple-private-cloud-compute-virtualresearchenvironment"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/visuallookup.md",
+      "title": "Visual Lookup",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/visuallookup",
+      "sourceSha256": "7d8bdd753c833c2f0734d673b313fd79ae6e718e7a94921d2039053d83f14a97",
+      "sourceId": "apple-private-cloud-compute-visuallookup"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/vreinteraction.md",
+      "title": "Interact with the VRE",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/vreinteraction",
+      "sourceSha256": "911f00f4aa29ca2f4dca16a7e4230845e75b08e4c65ee61bcd12fa0a25bcfbae",
+      "sourceId": "apple-private-cloud-compute-vreinteraction"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/vreresearchvariant.md",
+      "title": "Research Variant",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/vreresearchvariant",
+      "sourceSha256": "cce731a58a7cd757582d96e98163762af6fdbabd8aff085b5ff8ed2767191bad",
+      "sourceId": "apple-private-cloud-compute-vreresearchvariant"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/vresetup.md",
+      "title": "Get Started with the VRE",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/vresetup",
+      "sourceSha256": "8a4837ba6c0c25cdd11cc4993de2e34eab947a11472fd9f06f68d2ebe9221914",
+      "sourceId": "apple-private-cloud-compute-vresetup"
+    },
+    {
+      "path": "apple/wiki/sources/apple-private-cloud-compute/vreshadow.md",
+      "title": "Shadow Tunneling",
+      "vendor": "apple",
+      "tier": "official-primary",
+      "kind": "docc-json",
+      "canonicalUrl": "https://security.apple.com/documentation/private-cloud-compute/vreshadow",
+      "sourceSha256": "bea27e2e3a48d2b0c281d73881f7f457efccd700c1f5a5f7bfcfe3714a4dc700",
+      "sourceId": "apple-private-cloud-compute-vreshadow"
+    },
+    {
+      "path": "cross-vendor/wiki/comparisons/architecture-boundary.md",
+      "title": "Architecture Boundary: Where Processing Happens",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "comparison",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+      "title": "Transparency and Verifiability: Researcher Access Models",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "comparison",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/apple-private-cloud-compute.md",
+      "title": "Apple Private Cloud Compute",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/google-private-compute-core.md",
+      "title": "Google Private Compute Core / Private AI",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/meta-private-processing.md",
+      "title": "Meta Private Processing",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/non-targetability.md",
+      "title": "Non-Targetability",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/remote-attestation.md",
+      "title": "Remote Attestation",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/stateless-inference.md",
+      "title": "Stateless Inference and Data Retention",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/concepts/verifiable-transparency.md",
+      "title": "Verifiable Transparency",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "concept",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "cross-vendor/wiki/index.md",
+      "title": "Cross-Vendor Private AI Wiki",
+      "vendor": "cross-vendor",
+      "tier": "synthesis",
+      "kind": "index",
+      "canonicalUrl": null,
+      "sourceSha256": null,
+      "sourceId": null
+    },
+    {
+      "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+      "title": "Android's private AI approach",
+      "vendor": "google",
+      "tier": "official-primary",
+      "kind": "security-blog",
+      "canonicalUrl": "https://security.googleblog.com/2024/08/android-private-ai-approach.html",
+      "sourceSha256": "d158bcad56505dc3250a0188c825e5dd7cda46214742fbd8266c9a974d62975d",
+      "sourceId": "google-private-ai-approach-2024-08"
+    },
+    {
+      "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+      "title": "google/private-compute-services",
+      "vendor": "google",
+      "tier": "official-primary",
+      "kind": "github-repo",
+      "canonicalUrl": "https://github.com/google/private-compute-services",
+      "sourceSha256": "4d06f6827b5abe01f37e3245abd8a579abc1f6d42e95691020df8b4dcd7e1a86",
+      "sourceId": "google-private-compute-services-repo"
+    },
+    {
+      "path": "google/wiki/sources/google-private-ai/introducing-androids-private-compute.md",
+      "title": "Introducing Android's Private Compute Core",
+      "vendor": "google",
+      "tier": "official-primary",
+      "kind": "security-blog",
+      "canonicalUrl": "https://security.googleblog.com/2021/09/introducing-androids-private-compute.html",
+      "sourceSha256": "a64cfb1d603a7a788e669d33295d01107efb16b08daa311430de40d6d992a76d",
+      "sourceId": "google-introducing-private-compute-2021-09"
+    },
+    {
+      "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+      "title": "project-oak/oak",
+      "vendor": "google",
+      "tier": "official-primary",
+      "kind": "github-repo",
+      "canonicalUrl": "https://github.com/project-oak/oak",
+      "sourceSha256": "b1b3b7ee4f5f24589c882390ea2bc829f17a4bafe32d0112f0c408db12aa7ac0",
+      "sourceId": "project-oak-repo"
+    },
+    {
+      "path": "google/wiki/sources/google-private-ai/trust-in-transparency-private-compute.md",
+      "title": "Trust in transparency: Private Compute Core",
+      "vendor": "google",
+      "tier": "official-primary",
+      "kind": "security-blog",
+      "canonicalUrl": "https://security.googleblog.com/2022/12/trust-in-transparency-private-compute.html",
+      "sourceSha256": "a21fc44597e3dec3e93e65a54abbc4a0cdfdaec3ca61bad25d7aaed6f69794d4",
+      "sourceId": "google-trust-in-transparency-2022-12"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/five-security-principles-for-billions-of-messages-across-metas-apps.md",
+      "title": "Five security principles for billions of messages across Meta's apps",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "engineering-blog",
+      "canonicalUrl": "https://engineering.fb.com/2022/07/28/security/five-security-principles-for-billions-of-messages-across-metas-apps/",
+      "sourceSha256": "9b1c67471b15008841153fe3743ce11fb924d603c5d03b9e0bfda47bba36d658",
+      "sourceId": "meta-whatsapp-five-security-principles-2022-07-28"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/incognito-chat-whatsapp-meta-ai.md",
+      "title": "Incognito Chat on WhatsApp with Meta AI",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "engineering-blog",
+      "canonicalUrl": "https://about.fb.com/news/2026/05/incognito-chat-whatsapp-meta-ai/",
+      "sourceSha256": "6853a1c1ba93fba200b6b92f38a71ef314b60d46632428eacf821f13131698f1",
+      "sourceId": "meta-whatsapp-incognito-chat-2026-05"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/introducing-advanced-chat-privacy.md",
+      "title": "Introducing Advanced Chat Privacy",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "engineering-blog",
+      "canonicalUrl": "https://blog.whatsapp.com/introducing-advanced-chat-privacy",
+      "sourceSha256": "13956a5d8fb8b62321eac7e52b6ed7454cbf7ba4fcf233a12898bbf2f61acbe8",
+      "sourceId": "whatsapp-blog-advanced-chat-privacy"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md",
+      "title": "IPLS: Privacy-preserving storage for your WhatsApp contacts",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "engineering-blog",
+      "canonicalUrl": "https://engineering.fb.com/2024/10/22/security/ipls-privacy-preserving-storage-for-your-whatsapp-contacts/",
+      "sourceSha256": "b7714744b9b6ff386b8a9713da073cb006e8d05e16974a78dfb6fd922cbcf9b5",
+      "sourceId": "meta-whatsapp-ipls-2024-10-22"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+      "title": "Private Processing for WhatsApp Overview",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "whitepaper",
+      "canonicalUrl": "https://ai.meta.com/static-resource/private-processing-technical-whitepaper",
+      "sourceSha256": "abdfcba28126e99420083ee94d2d8d784763b4009655a9d0a2bce4408b51656a",
+      "sourceId": "meta-private-processing-whitepaper"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md",
+      "title": "Deploying key transparency at WhatsApp",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "engineering-blog",
+      "canonicalUrl": "https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/",
+      "sourceSha256": "67ac95a7ac703597464734f614ae5b330b573b3068946353cd6d62654fdbdea9",
+      "sourceId": "meta-whatsapp-key-transparency-2023-04-13"
+    },
+    {
+      "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+      "title": "Building Private Processing for AI tools on WhatsApp",
+      "vendor": "meta",
+      "tier": "official-primary",
+      "kind": "engineering-blog",
+      "canonicalUrl": "https://engineering.fb.com/2025/04/29/security/whatsapp-private-processing-ai-tools/",
+      "sourceSha256": "db1dd78a441ed919dae1bc44784a7a5aa001a58709a6494a55db40ca7a198c2e",
+      "sourceId": "meta-whatsapp-private-processing-2025-04-29"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+---
+title: "Transparency and Verifiability"
+description: "How each project lets outsiders inspect or verify claims."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Transparency and Verifiability
+
+Transparency differs by project: Apple emphasizes production image transparency and VRE, Meta emphasizes CVM/artifact verification, and Google/Oak emphasizes open source, reproducible builds, binary transparency, and Rekor-style release evidence.
+
+<AttestationPipelineDiagram diagramId="apple-attestation" />
+<AttestationPipelineDiagram diagramId="meta-attestation" />
+<AttestationPipelineDiagram diagramId="google-oak-transparency" />
+<ComparisonMatrix claimIds={["apple-transparency", "meta-transparency", "google-oak", "comparison-transparency"]} />
+

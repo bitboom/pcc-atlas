@@ -1,13 +1,15 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import svelte from '@astrojs/svelte';
 
 export default defineConfig({
   site: 'https://bitboom.github.io',
   base: '/pcc-atlas',
   integrations: [
+    svelte(),
     starlight({
       title: 'PCC Atlas',
-      description: 'Source-backed atlas of private AI compute systems: Apple PCC, Meta Private Processing, and Google Private AI.',
+      description: 'Diagram-first, source-backed atlas of private AI compute systems: Apple PCC, Meta Private Processing, and Google Private AI.',
       customCss: ['./src/styles/custom.css'],
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/bitboom/pcc-atlas' }],
       sidebar: [
@@ -24,6 +26,7 @@ export default defineConfig({
           label: 'Compare',
           items: [
             { label: 'Architecture Boundary', slug: 'compare/architecture-boundary' },
+            { label: 'Request Flow', slug: 'compare/request-flow' },
             { label: 'Transparency & Verifiability', slug: 'compare/transparency-and-verifiability' }
           ]
         },
@@ -36,6 +39,7 @@ export default defineConfig({
             { label: 'Verifiable Transparency', slug: 'concepts/verifiable-transparency' }
           ]
         },
+        { label: 'Study', items: [{ label: 'Interactive Study', slug: 'study' }] },
         { label: 'Evidence', items: [{ label: 'Evidence Explorer', slug: 'evidence' }] }
       ],
       editLink: {

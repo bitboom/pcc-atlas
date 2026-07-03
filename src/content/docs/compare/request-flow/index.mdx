@@ -1,0 +1,28 @@
+---
+title: "Request Flow"
+description: "Compare request/session flow across Apple, Meta, and Google."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Request Flow
+
+This page compares the first protected boundary each system asks the user/client to trust.
+
+<RequestFlowDiagram diagramId="apple-request-flow" />
+<RequestFlowDiagram diagramId="meta-request-flow" />
+<TrustBoundaryDiagram diagramId="google-system-map" />
+<FlowStepper project="all" client:only="svelte" />
+

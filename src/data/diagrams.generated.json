@@ -1,0 +1,952 @@
+{
+  "pccRefCommit": "4baf997394629ad6e39790e38ede3a7768fa2f35",
+  "generatedAt": "2026-07-03T11:10:20.518Z",
+  "diagrams": [
+    {
+      "id": "overview-system-map",
+      "project": "cross-vendor",
+      "type": "system map",
+      "title": "Private AI compute system map",
+      "summary": "A side-by-side map of where sensitive data is processed and where verification evidence is exposed.",
+      "nodes": [
+        {
+          "id": "apple-device",
+          "label": "Apple device",
+          "summary": "validates PCC nodes",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            }
+          ]
+        },
+        {
+          "id": "apple-pcc",
+          "label": "Apple PCC node",
+          "summary": "cloud trust boundary",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+              "label": "statelessandenforcable"
+            }
+          ]
+        },
+        {
+          "id": "meta-client",
+          "label": "WhatsApp client",
+          "summary": "anonymous setup",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+              "label": "whatsapp-private-processing-ai-tools"
+            }
+          ]
+        },
+        {
+          "id": "meta-cvm",
+          "label": "Meta CVM / TEE",
+          "summary": "confidential AI work",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "google-pcc",
+          "label": "Android PCC",
+          "summary": "on-device boundary",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "google-oak",
+          "label": "Project Oak",
+          "summary": "sealed cloud path",
+          "kind": "cloud",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        },
+        {
+          "id": "public-evidence",
+          "label": "Public evidence",
+          "summary": "logs / VRE / source",
+          "kind": "log",
+          "sourceRefs": [
+            {
+              "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+              "label": "transparency-and-verifiability"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "apple-to-pcc",
+          "from": "apple-device",
+          "to": "apple-pcc",
+          "label": "attested encrypted request",
+          "summary": "attested encrypted request",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            },
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+              "label": "verifiabletransparency"
+            }
+          ]
+        },
+        {
+          "id": "meta-to-cvm",
+          "from": "meta-client",
+          "to": "meta-cvm",
+          "label": "OHTTP + RA-TLS",
+          "summary": "OHTTP + RA-TLS",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "google-to-pcs",
+          "from": "google-pcc",
+          "to": "google-oak",
+          "label": "conditional cloud path",
+          "summary": "conditional cloud path",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+              "label": "android-private-ai-approach"
+            },
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        },
+        {
+          "id": "systems-to-evidence",
+          "from": "apple-pcc",
+          "to": "public-evidence",
+          "label": "verifiability surface",
+          "summary": "verifiability surface",
+          "sourceRefs": [
+            {
+              "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+              "label": "transparency-and-verifiability"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apple-request-flow",
+      "project": "apple",
+      "type": "request flow",
+      "title": "Apple PCC request flow",
+      "summary": "Device-side validation and encryption keep supporting data-center services outside the sensitive-data boundary.",
+      "nodes": [
+        {
+          "id": "device",
+          "label": "User device",
+          "summary": "selects validated nodes",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            }
+          ]
+        },
+        {
+          "id": "gateway",
+          "label": "Privacy gateway",
+          "summary": "outside trust boundary",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+              "label": "statelessandenforcable"
+            }
+          ]
+        },
+        {
+          "id": "pcc-node",
+          "label": "PCC compute node",
+          "summary": "decrypts and processes",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+              "label": "statelessandenforcable"
+            }
+          ]
+        },
+        {
+          "id": "transparency",
+          "label": "Transparency log",
+          "summary": "measurement evidence",
+          "kind": "log",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+              "label": "verifiabletransparency"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "device-verify",
+          "from": "device",
+          "to": "transparency",
+          "label": "checks software measurements",
+          "summary": "checks software measurements",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+              "label": "verifiabletransparency"
+            }
+          ]
+        },
+        {
+          "id": "device-gateway",
+          "from": "device",
+          "to": "gateway",
+          "label": "routes without decryption",
+          "summary": "routes without decryption",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            },
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/nontargetability.md",
+              "label": "nontargetability"
+            }
+          ]
+        },
+        {
+          "id": "gateway-node",
+          "from": "gateway",
+          "to": "pcc-node",
+          "label": "encrypted request reaches node",
+          "summary": "encrypted request reaches node",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            }
+          ]
+        },
+        {
+          "id": "node-log",
+          "from": "pcc-node",
+          "to": "transparency",
+          "label": "software image is public evidence",
+          "summary": "software image is public evidence",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+              "label": "verifiabletransparency"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apple-attestation",
+      "project": "apple",
+      "type": "attestation chain",
+      "title": "Apple attestation and transparency chain",
+      "summary": "Hardware roots and public measurements turn the cloud node into a verifiable target before data is sent.",
+      "nodes": [
+        {
+          "id": "hardware",
+          "label": "Hardware root",
+          "summary": "Apple silicon roots",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md",
+              "label": "hardwarerootoftrust"
+            }
+          ]
+        },
+        {
+          "id": "measured-code",
+          "label": "Measured code",
+          "summary": "authorized software only",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+              "label": "statelessandenforcable"
+            }
+          ]
+        },
+        {
+          "id": "device-check",
+          "label": "Device check",
+          "summary": "validates target",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            }
+          ]
+        },
+        {
+          "id": "vre",
+          "label": "Research tooling",
+          "summary": "VRE and images",
+          "kind": "log",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+              "label": "verifiabletransparency"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "hardware-code",
+          "from": "hardware",
+          "to": "measured-code",
+          "label": "measured boot",
+          "summary": "measured boot",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md",
+              "label": "hardwarerootoftrust"
+            },
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+              "label": "statelessandenforcable"
+            }
+          ]
+        },
+        {
+          "id": "code-device",
+          "from": "measured-code",
+          "to": "device-check",
+          "label": "attestation evidence",
+          "summary": "attestation evidence",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            }
+          ]
+        },
+        {
+          "id": "code-vre",
+          "from": "measured-code",
+          "to": "vre",
+          "label": "public inspection",
+          "summary": "public inspection",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+              "label": "verifiabletransparency"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta-request-flow",
+      "project": "meta",
+      "type": "request flow",
+      "title": "Meta Private Processing request flow",
+      "summary": "WhatsApp uses anonymous routing and attested CVMs so the request can be processed without exposing message content to relay or gateway layers.",
+      "nodes": [
+        {
+          "id": "client",
+          "label": "WhatsApp client",
+          "summary": "user-initiated AI request",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+              "label": "whatsapp-private-processing-ai-tools"
+            }
+          ]
+        },
+        {
+          "id": "acs",
+          "label": "Anonymous credentials",
+          "summary": "optional/private access",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "relay",
+          "label": "OHTTP relay",
+          "summary": "third-party routing",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "gateway",
+          "label": "Meta gateway",
+          "summary": "cannot read content",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "cvm",
+          "label": "CVM / TEE",
+          "summary": "private processing app",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "client-acs",
+          "from": "client",
+          "to": "acs",
+          "label": "anonymous credential setup",
+          "summary": "anonymous credential setup",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "client-relay",
+          "from": "client",
+          "to": "relay",
+          "label": "OHTTP encrypted request",
+          "summary": "OHTTP encrypted request",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "relay-gateway",
+          "from": "relay",
+          "to": "gateway",
+          "label": "unlinkable routing hop",
+          "summary": "unlinkable routing hop",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "gateway-cvm",
+          "from": "gateway",
+          "to": "cvm",
+          "label": "attested encrypted session",
+          "summary": "attested encrypted session",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta-attestation",
+      "project": "meta",
+      "type": "attestation chain",
+      "title": "Meta CVM attestation chain",
+      "summary": "The client checks CVM measurements and acceptable binary logs before sending protected content.",
+      "nodes": [
+        {
+          "id": "cvm-image",
+          "label": "CVM image",
+          "summary": "measured artifact",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "third-party-log",
+          "label": "Third-party log",
+          "summary": "acceptable binaries",
+          "kind": "log",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "ra-tls",
+          "label": "RA-TLS",
+          "summary": "attested channel",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "researchers",
+          "label": "Researchers",
+          "summary": "continuous verification",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+              "label": "whatsapp-private-processing-ai-tools"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "image-log",
+          "from": "cvm-image",
+          "to": "third-party-log",
+          "label": "digest publication",
+          "summary": "digest publication",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "log-ratls",
+          "from": "third-party-log",
+          "to": "ra-tls",
+          "label": "policy verification",
+          "summary": "policy verification",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        },
+        {
+          "id": "ratls-research",
+          "from": "ra-tls",
+          "to": "researchers",
+          "label": "verification surface",
+          "summary": "verification surface",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+              "label": "whatsapp-private-processing-ai-tools"
+            },
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "google-system-map",
+      "project": "google",
+      "type": "system map",
+      "title": "Google Private AI system map",
+      "summary": "Google separates Android on-device isolation from Project Oak sealed-computing cloud patterns.",
+      "nodes": [
+        {
+          "id": "apps",
+          "label": "Android apps",
+          "summary": "outside PCC",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "pcc",
+          "label": "Private Compute Core",
+          "summary": "isolated on-device work",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "pcs",
+          "label": "Private Compute Services",
+          "summary": "privacy-preserving bridge",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "pir",
+          "label": "PIR / federated compute",
+          "summary": "limited APIs",
+          "kind": "cloud",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "oak",
+          "label": "Project Oak",
+          "summary": "sealed cloud apps",
+          "kind": "cloud",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "apps-pcc",
+          "from": "apps",
+          "to": "pcc",
+          "label": "OS isolation boundary",
+          "summary": "OS isolation boundary",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "pcc-pcs",
+          "from": "pcc",
+          "to": "pcs",
+          "label": "no direct network access",
+          "summary": "no direct network access",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "pcs-pir",
+          "from": "pcs",
+          "to": "pir",
+          "label": "PIR / protected download",
+          "summary": "PIR / protected download",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            }
+          ]
+        },
+        {
+          "id": "pcc-oak",
+          "from": "pcc",
+          "to": "oak",
+          "label": "separate cloud path",
+          "summary": "separate cloud path",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+              "label": "android-private-ai-approach"
+            },
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "google-oak-transparency",
+      "project": "google",
+      "type": "transparency pipeline",
+      "title": "Google Oak transparency pipeline",
+      "summary": "Oak emphasizes open-source sealed computing, attestable enclave applications, and transparent releases.",
+      "nodes": [
+        {
+          "id": "source",
+          "label": "Source code",
+          "summary": "open components",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        },
+        {
+          "id": "build",
+          "label": "Reproducible build",
+          "summary": "provenance",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        },
+        {
+          "id": "rekor",
+          "label": "Rekor / transparency",
+          "summary": "release evidence",
+          "kind": "log",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            },
+            {
+              "path": "google/wiki/sources/google-private-ai/trust-in-transparency-private-compute.md",
+              "label": "trust-in-transparency-private-compute"
+            }
+          ]
+        },
+        {
+          "id": "client",
+          "label": "Verifier",
+          "summary": "checks attestation",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "source-build",
+          "from": "source",
+          "to": "build",
+          "label": "build provenance",
+          "summary": "build provenance",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        },
+        {
+          "id": "build-rekor",
+          "from": "build",
+          "to": "rekor",
+          "label": "transparent release",
+          "summary": "transparent release",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        },
+        {
+          "id": "rekor-client",
+          "from": "rekor",
+          "to": "client",
+          "label": "verification evidence",
+          "summary": "verification evidence",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+              "label": "project-oak_oak"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparison-request-flow",
+      "project": "cross-vendor",
+      "type": "comparison",
+      "title": "Request-flow contrast",
+      "summary": "The projects differ most in where the first protected boundary appears and what public evidence a client or researcher can inspect.",
+      "nodes": [
+        {
+          "id": "apple",
+          "label": "Apple",
+          "summary": "device-to-PCC cloud",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+              "label": "requestflow"
+            },
+            {
+              "path": "cross-vendor/wiki/concepts/apple-private-cloud-compute.md",
+              "label": "apple-private-cloud-compute"
+            }
+          ]
+        },
+        {
+          "id": "meta",
+          "label": "Meta",
+          "summary": "client-to-CVM cloud",
+          "kind": "private",
+          "sourceRefs": [
+            {
+              "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+              "label": "private-processing-technical-whitepaper"
+            },
+            {
+              "path": "cross-vendor/wiki/concepts/meta-private-processing.md",
+              "label": "meta-private-processing"
+            }
+          ]
+        },
+        {
+          "id": "google",
+          "label": "Google",
+          "summary": "on-device PCC first",
+          "kind": "device",
+          "sourceRefs": [
+            {
+              "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+              "label": "google_private-compute-services"
+            },
+            {
+              "path": "cross-vendor/wiki/concepts/google-private-compute-core.md",
+              "label": "google-private-compute-core"
+            }
+          ]
+        },
+        {
+          "id": "unknown",
+          "label": "Google non-targetability",
+          "summary": "Not documented in ingested sources",
+          "kind": "external",
+          "sourceRefs": [
+            {
+              "path": "cross-vendor/wiki/concepts/non-targetability.md",
+              "label": "non-targetability"
+            },
+            {
+              "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+              "label": "android-private-ai-approach"
+            }
+          ],
+          "documentationStatus": "not_documented"
+        }
+      ],
+      "edges": [
+        {
+          "id": "apple-meta",
+          "from": "apple",
+          "to": "meta",
+          "label": "cloud confidential path",
+          "summary": "cloud confidential path",
+          "sourceRefs": [
+            {
+              "path": "cross-vendor/wiki/comparisons/architecture-boundary.md",
+              "label": "architecture-boundary"
+            }
+          ]
+        },
+        {
+          "id": "meta-google",
+          "from": "meta",
+          "to": "google",
+          "label": "cloud vs on-device first",
+          "summary": "cloud vs on-device first",
+          "sourceRefs": [
+            {
+              "path": "cross-vendor/wiki/comparisons/architecture-boundary.md",
+              "label": "architecture-boundary"
+            }
+          ]
+        },
+        {
+          "id": "google-unknown",
+          "from": "google",
+          "to": "unknown",
+          "label": "Not documented in ingested sources",
+          "summary": "Not documented in ingested sources",
+          "sourceRefs": [
+            {
+              "path": "cross-vendor/wiki/concepts/non-targetability.md",
+              "label": "non-targetability"
+            },
+            {
+              "path": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+              "label": "android-private-ai-approach"
+            }
+          ],
+          "documentationStatus": "not_documented"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+---
+title: "PCC Atlas"
+description: "Diagram-first, source-backed atlas of private AI compute systems."
+---
+
+
+import DiagramFrame from '../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../components/study/StudyCards.svelte';
+import FlowStepper from '../../components/study/FlowStepper.svelte';
+import Quiz from '../../components/study/Quiz.svelte';
+
+
+
+<div class="hero-atlas">
+<p class="kicker">Diagram-first evidence atlas</p>
+<h1>PCC Atlas</h1>
+<p>PCC Atlas explains private AI compute systems through site-native SVG maps, guided study interactions, and source-backed summaries. Raw corpus paths remain available as evidence, but the primary learning surface is the atlas itself.</p>
+<div class="stat-row">
+  <span class="stat-pill"><strong>42</strong> Apple sources</span>
+  <span class="stat-pill"><strong>7</strong> Meta sources</span>
+  <span class="stat-pill"><strong>5</strong> Google sources</span>
+  <span class="stat-pill"><strong>54</strong> total primary sources</span>
+</div>
+<p class="small-muted">Built from pcc-ref commit <code>4baf99739462</code>.</p>
+</div>
+
+<DiagramFrame diagramId="overview-system-map" />
+
+## Start with the three systems
+
+<div class="project-grid">
+  <article class="project-card apple"><h3><a href="/pcc-atlas/projects/apple/">Apple Private Cloud Compute</a></h3><p>Cloud PCC nodes with device-side validation, statelessness, non-targetability, and public software transparency.</p></article>
+  <article class="project-card meta"><h3><a href="/pcc-atlas/projects/meta/">Meta / WhatsApp Private Processing</a></h3><p>Optional WhatsApp AI work inside CVM/TEE infrastructure reached through anonymous routing and RA-TLS.</p></article>
+  <article class="project-card google"><h3><a href="/pcc-atlas/projects/google/">Google Private AI</a></h3><p>Android Private Compute Core is on-device-first; Project Oak describes a separate sealed-computing cloud path.</p></article>
+</div>
+
+<ComparisonMatrix claimIds={["comparison-boundary", "comparison-transparency", "google-non-targetability-unknown"]} />
+
+<StudyCards project="all" client:only="svelte" />
+<Quiz project="cross-vendor" client:only="svelte" />
+
+## Evidence contract
+
+Every substantive claim, diagram node, diagram edge, flow step, and quiz answer is backed by <code>sourceRefs</code> in the generated manifests. Unknown dimensions render exactly: **Not documented in ingested sources**.
+

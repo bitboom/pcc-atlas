@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Test
         run: npm test
+      - name: Astro check
+        run: npm run check:astro
       - name: Validate generated evidence links
         run: npm run validate:evidence
         env:

@@ -1,0 +1,17 @@
+---
+import claimsManifest from '../../data/claims.generated.json';
+import SourceRefList from './SourceRefList.astro';
+const { claimIds = [] } = Astro.props;
+const claims = claimIds.length ? claimsManifest.claims.filter((claim) => claimIds.includes(claim.id)) : claimsManifest.claims;
+---
+
+<div class="comparison-matrix">
+  {claims.map((claim) => (
+    <article class="matrix-card" data-claim-id={claim.id}>
+      <p class="evidence-kicker">{claim.project}</p>
+      <h3>{claim.title}</h3>
+      <p>{claim.summary}</p>
+      <SourceRefList refs={claim.sourceRefs} compact />
+    </article>
+  ))}
+</div>

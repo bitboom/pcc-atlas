@@ -1,0 +1,37 @@
+---
+title: "Meta / WhatsApp Private Processing"
+description: "Meta / WhatsApp Private Processing diagram-first overview."
+---
+
+
+import DiagramFrame from '../../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../../components/study/Quiz.svelte';
+
+
+
+# Meta / WhatsApp Private Processing
+
+Meta Private Processing is an optional WhatsApp AI path designed to process user-directed requests inside confidential infrastructure that Meta and WhatsApp should not be able to inspect.
+
+<RequestFlowDiagram diagramId="meta-request-flow" />
+
+<AttestationPipelineDiagram diagramId="meta-attestation" />
+
+## Source-backed design claims
+
+<ClaimCard claimId="meta-trust-boundary" />
+<ClaimCard claimId="meta-attested-session" />
+<ClaimCard claimId="meta-transparency" />
+
+<CitationDrawer sourcePath="meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md" label="Inspect primary source" client:only="svelte" />
+<FlowStepper project="meta" client:only="svelte" />
+<StudyCards project="meta" client:only="svelte" />
+

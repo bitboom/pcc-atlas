@@ -6,9 +6,10 @@
 
 ## OVERVIEW
 
-PCC Atlas is an Astro/Starlight public learning site about private AI compute
-systems. The evidence corpus is consumed from a local read-only `pcc-ref` checkout
-(default sibling path `../pcc-ref`) and regenerated into checked-in docs/data.
+PCC Atlas v1 is an Astro/Starlight public, diagram-first, source-backed learning
+atlas about private AI compute systems. The evidence corpus is consumed from a
+local read-only `pcc-ref` checkout (default sibling path `../pcc-ref` or
+`$PCC_REF_DIR`) and regenerated into checked-in docs/data.
 
 ## STRUCTURE
 
@@ -30,7 +31,7 @@ pcc-atlas/
 | Task | Location | Notes |
 |---|---|---|
 | Understand repo purpose | `README.md` | Public site and evidence boundary. |
-| Visual system | `DESIGN.md` | Must be updated before UI/component changes. |
+| Visual system | `DESIGN.md` | SVG-first and evidence-backed; must be updated before UI/component changes. |
 | Site config | `astro.config.mjs` | Starlight sidebar and GitHub Pages base path. |
 | Generate docs/data | `scripts/sync-pcc-ref.mjs` | Reads local corpus and writes site-owned generated pages. |
 | Validate evidence | `scripts/validate-evidence.mjs` | Fails on missing pinned source paths. |
@@ -55,6 +56,9 @@ pcc-atlas/
 - Run `npm run sync:pcc-ref` before building so generated docs reflect the pinned corpus.
 - Use `data-pcc-ref="repo/path.md"` on source-backed evidence cards; validation depends on it.
 - Keep public site claims either source-backed or explicitly caveated.
+- Prefer site-native learning surfaces, especially SVG diagrams, comparison
+  tables, and evidence cards; raw Markdown/source links are secondary.
+- Unknown dimensions must render exactly: `Not documented in ingested sources`.
 - Do not edit source corpus files for site work; regenerate public docs/data instead.
 
 ## ANTI-PATTERNS

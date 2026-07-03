@@ -1,0 +1,70 @@
+---
+import diagramsManifest from '../../data/diagrams.generated.json';
+import SourceRefList from './SourceRefList.astro';
+
+const { diagramId } = Astro.props;
+const diagram = diagramsManifest.diagrams.find((entry) => entry.id === diagramId);
+if (!diagram) throw new Error(`Unknown diagramId: ${diagramId}`);
+
+const width = 920;
+const height = 420;
+const cols = Math.min(4, Math.max(2, Math.ceil(Math.sqrt(diagram.nodes.length))));
+const rows = Math.ceil(diagram.nodes.length / cols);
+const xGap = width / (cols + 1);
+const yGap = height / (rows + 1);
+const positioned = diagram.nodes.map((node, index) => ({
+  ...node,
+  x: Math.round(xGap * ((index % cols) + 1)),
+  y: Math.round(yGap * (Math.floor(index / cols) + 1))
+}));
+const nodeById = new Map(positioned.map((node) => [node.id, node]));
+const edgePaths = diagram.edges.map((edge) => {
+  const fromNode = nodeById.get(edge.from);
+  const toNode = nodeById.get(edge.to);
+  if (!fromNode || !toNode) return null;
+  return {
+    ...edge,
+    fromX: fromNode.x,
+    fromY: fromNode.y,
+    toX: toNode.x,
+    toY: toNode.y,
+    labelX: (fromNode.x + toNode.x) / 2,
+    labelY: (fromNode.y + toNode.y) / 2 - 8
+  };
+}).filter((edge) => edge !== null);
+const allRefs = [...diagram.nodes, ...diagram.edges].flatMap((item) => item.sourceRefs || []);
+---
+
+<section class="diagram-frame" data-diagram-id={diagram.id}>
+  <div class="diagram-header">
+    <p class="evidence-kicker">{diagram.project || 'cross-vendor'} · {diagram.type}</p>
+    <h2>{diagram.title}</h2>
+    <p>{diagram.summary}</p>
+  </div>
+  <svg class="atlas-svg" viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby={`${diagram.id}-title ${diagram.id}-desc`}>
+    <title id={`${diagram.id}-title`}>{diagram.title}</title>
+    <desc id={`${diagram.id}-desc`}>{diagram.summary}</desc>
+    <defs>
+      <marker id={`${diagram.id}-arrow`} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" />
+      </marker>
+    </defs>
+    {edgePaths.map((edge) => (
+      <g class="diagram-edge" data-source-ref={edge.sourceRefs?.[0]?.path}>
+        <line x1={edge.fromX} y1={edge.fromY} x2={edge.toX} y2={edge.toY} marker-end={`url(#${diagram.id}-arrow)`} />
+        <text x={edge.labelX} y={edge.labelY}>{edge.label}</text>
+      </g>
+    ))}
+    {positioned.map((node) => (
+      <g class:list={["diagram-node", node.kind]} transform={`translate(${node.x - 78}, ${node.y - 34})`} data-source-ref={node.sourceRefs?.[0]?.path}>
+        <rect width="156" height="68" rx="14" />
+        <text class="node-label" x="78" y="28">{node.label}</text>
+        <text class="node-summary" x="78" y="48">{node.summary}</text>
+      </g>
+    ))}
+  </svg>
+  <details class="diagram-sources">
+    <summary>Diagram source manifest</summary>
+    <SourceRefList refs={allRefs} compact />
+  </details>
+</section>

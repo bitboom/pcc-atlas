@@ -1,0 +1,144 @@
+{
+  "pccRefCommit": "4baf997394629ad6e39790e38ede3a7768fa2f35",
+  "generatedAt": "2026-07-03T11:10:20.518Z",
+  "items": [
+    {
+      "id": "apple-flow-1",
+      "project": "apple",
+      "type": "flow-step",
+      "title": "Validate before sending",
+      "summary": "The device validates the PCC target and software evidence before protected user data is sent.",
+      "sourceRefs": [
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+          "label": "requestflow"
+        },
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+          "label": "verifiabletransparency"
+        }
+      ]
+    },
+    {
+      "id": "meta-flow-1",
+      "project": "meta",
+      "type": "flow-step",
+      "title": "Build an anonymous attested path",
+      "summary": "The WhatsApp client uses anonymous routing and attestation before the CVM processes content.",
+      "sourceRefs": [
+        {
+          "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+          "label": "private-processing-technical-whitepaper"
+        }
+      ]
+    },
+    {
+      "id": "google-flow-1",
+      "project": "google",
+      "type": "flow-step",
+      "title": "Stay on device first",
+      "summary": "Android Private Compute Core isolates sensitive features and uses Private Compute Services as the network bridge.",
+      "sourceRefs": [
+        {
+          "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+          "label": "google_private-compute-services"
+        }
+      ]
+    },
+    {
+      "id": "apple-card",
+      "project": "apple",
+      "type": "flashcard",
+      "question": "What is the Apple PCC trust boundary?",
+      "answer": "The custom Apple-silicon PCC compute node, not load balancers or privacy gateways.",
+      "sourceRefs": [
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+          "label": "statelessandenforcable"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/apple-private-cloud-compute.md",
+          "label": "apple-private-cloud-compute"
+        }
+      ]
+    },
+    {
+      "id": "meta-card",
+      "project": "meta",
+      "type": "flashcard",
+      "question": "What does Meta verify before private processing?",
+      "answer": "A CVM/TEE measurement and acceptable binary policy before encrypted user data is processed.",
+      "sourceRefs": [
+        {
+          "path": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+          "label": "private-processing-technical-whitepaper"
+        }
+      ]
+    },
+    {
+      "id": "google-card",
+      "project": "google",
+      "type": "flashcard",
+      "question": "What makes Google structurally different?",
+      "answer": "The sensitive-data boundary is on-device first through Android Private Compute Core, with a separate Oak cloud path.",
+      "sourceRefs": [
+        {
+          "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+          "label": "google_private-compute-services"
+        },
+        {
+          "path": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+          "label": "project-oak_oak"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/google-private-compute-core.md",
+          "label": "google-private-compute-core"
+        }
+      ]
+    },
+    {
+      "id": "boundary-quiz",
+      "project": "cross-vendor",
+      "type": "quiz",
+      "question": "Which project primarily frames the sensitive-data boundary as Android on-device isolation?",
+      "options": [
+        "Apple PCC",
+        "Meta Private Processing",
+        "Google Private AI"
+      ],
+      "answer": "Google Private AI",
+      "sourceRefs": [
+        {
+          "path": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+          "label": "google_private-compute-services"
+        },
+        {
+          "path": "cross-vendor/wiki/concepts/google-private-compute-core.md",
+          "label": "google-private-compute-core"
+        }
+      ]
+    },
+    {
+      "id": "transparency-quiz",
+      "project": "cross-vendor",
+      "type": "quiz",
+      "question": "Which transparency phrase belongs to Apple PCC in this corpus?",
+      "options": [
+        "Virtual Research Environment",
+        "Anonymous Credentials Service",
+        "Private Compute Services"
+      ],
+      "answer": "Virtual Research Environment",
+      "sourceRefs": [
+        {
+          "path": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+          "label": "verifiabletransparency"
+        },
+        {
+          "path": "cross-vendor/wiki/comparisons/transparency-and-verifiability.md",
+          "label": "transparency-and-verifiability"
+        }
+      ]
+    }
+  ]
+}

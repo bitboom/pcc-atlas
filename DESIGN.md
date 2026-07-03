@@ -2,7 +2,9 @@
 
 ## Purpose
 
-PCC Atlas is a technical editorial atlas for private AI compute systems. The interface should make source-backed architecture understandable without becoming a generic SaaS landing page.
+PCC Atlas v1 is a diagram-first, source-backed learning atlas for private AI
+compute systems. The interface should make source-backed architecture
+understandable without becoming a generic SaaS landing page.
 
 ## Voice
 
@@ -13,9 +15,13 @@ PCC Atlas is a technical editorial atlas for private AI compute systems. The int
 ## Visual direction
 
 - Documentation-first shell with a custom atlas homepage.
+- SVG-first and evidence-backed visual system; diagrams should be native,
+  inspectable site surfaces rather than decorative images.
 - Dense but readable comparison tables.
 - Evidence cards and trust-boundary diagrams are the signature components.
 - Use restrained vendor accents, not brand cloning.
+- Raw Markdown/source links are secondary to site-native learning surfaces.
+- Unknown dimensions must render exactly: `Not documented in ingested sources`.
 
 ## Tokens
 
@@ -61,3 +67,5 @@ PCC Atlas is a technical editorial atlas for private AI compute systems. The int
 - No uncited architectural claims.
 - No raw local paths or internal agent artifacts in public pages.
 - No copying vendor visual identity beyond small neutral accent colors.
+- No editing the read-only local source corpus (`../pcc-ref` or `$PCC_REF_DIR`);
+  generated docs/data are checked in by the site repo.

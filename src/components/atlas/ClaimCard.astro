@@ -1,0 +1,15 @@
+---
+import claimsManifest from '../../data/claims.generated.json';
+import SourceRefList from './SourceRefList.astro';
+
+const { claimId } = Astro.props;
+const claim = claimsManifest.claims.find((entry) => entry.id === claimId);
+if (!claim) throw new Error(`Unknown claimId: ${claimId}`);
+---
+
+<article class="claim-card" data-claim-id={claim.id}>
+  <p class="evidence-kicker">{claim.project || 'cross-vendor'} · {claim.documentationStatus || 'documented'}</p>
+  <h3>{claim.title}</h3>
+  <p>{claim.summary}</p>
+  <SourceRefList refs={claim.sourceRefs} compact />
+</article>

@@ -4,20 +4,38 @@ description: "Registry-backed evidence index for PCC Atlas."
 ---
 
 
+import DiagramFrame from '../../../components/atlas/DiagramFrame.astro';
+import RequestFlowDiagram from '../../../components/atlas/RequestFlowDiagram.astro';
+import TrustBoundaryDiagram from '../../../components/atlas/TrustBoundaryDiagram.astro';
+import AttestationPipelineDiagram from '../../../components/atlas/AttestationPipelineDiagram.astro';
+import ClaimCard from '../../../components/atlas/ClaimCard.astro';
+import ComparisonMatrix from '../../../components/atlas/ComparisonMatrix.astro';
+import CitationDrawer from '../../../components/atlas/CitationDrawer.svelte';
+import StudyCards from '../../../components/study/StudyCards.svelte';
+import FlowStepper from '../../../components/study/FlowStepper.svelte';
+import Quiz from '../../../components/study/Quiz.svelte';
+
+
+
 # Evidence Explorer
 
-PCC Atlas is built from pinned <code>pcc-ref</code> commit <code>4baf997394629ad6e39790e38ede3a7768fa2f35</code>. This page is generated from <code>apple/sources.json</code>, <code>meta/sources.json</code>, and <code>google/sources.json</code>.
+PCC Atlas is built from pinned <code>pcc-ref</code> commit <code>4baf997394629ad6e39790e38ede3a7768fa2f35</code>. This page is generated from the normalized source manifest, not from ad-hoc links.
 
 <div class="stat-row">
   <span class="stat-pill"><strong>42</strong> Apple</span>
   <span class="stat-pill"><strong>7</strong> Meta</span>
   <span class="stat-pill"><strong>5</strong> Google</span>
-  <span class="stat-pill"><strong>54</strong> Total</span>
+  <span class="stat-pill"><strong>64</strong> manifest sources</span>
 </div>
 
-| Vendor | Tier | Kind | Title | Local source | Canonical |
+<ComparisonMatrix claimIds={["comparison-boundary", "comparison-transparency"]} />
+
+| Vendor | Tier | Kind | Title | Source path | Canonical |
 | --- | --- | --- | --- | --- | --- |
 | apple | methodology | llm-wiki-pattern | Boris LLM Wiki pattern | <code>apple/wiki/raw/methodology/boris-llm-wiki.md</code> | [canonical](https://gist.github.com/borisush/81330ff1f2bb4e142e83fbbf17f5e2d0) |
+| apple | official-primary | security-blog | Expanding Private Cloud Compute | <code>apple/wiki/sources/apple-official-blog/expanding-pcc.md</code> | [canonical](https://security.apple.com/blog/expanding-pcc/) |
+| apple | official-primary | security-blog | Security research on Private Cloud Compute | <code>apple/wiki/sources/apple-official-blog/pcc-security-research.md</code> | [canonical](https://security.apple.com/blog/pcc-security-research/) |
+| apple | official-primary | security-blog | Private Cloud Compute: A new frontier for AI privacy in the cloud | <code>apple/wiki/sources/apple-official-blog/private-cloud-compute.md</code> | [canonical](https://security.apple.com/blog/private-cloud-compute/) |
 | apple | official-primary | docc-json | Appendix: Apple Intelligence Report | <code>apple/wiki/sources/apple-private-cloud-compute/appendix_appleintelligencereport.md</code> | [canonical](https://security.apple.com/documentation/private-cloud-compute/appendix_appleintelligencereport) |
 | apple | official-primary | docc-json | Appendix: Attestation Bundle Contents | <code>apple/wiki/sources/apple-private-cloud-compute/appendix_attestationbundle.md</code> | [canonical](https://security.apple.com/documentation/private-cloud-compute/appendix_attestationbundle) |
 | apple | official-primary | docc-json | Appendix: Secure Boot Tags | <code>apple/wiki/sources/apple-private-cloud-compute/appendix_secureboot.md</code> | [canonical](https://security.apple.com/documentation/private-cloud-compute/appendix_secureboot) |
@@ -56,19 +74,26 @@ PCC Atlas is built from pinned <code>pcc-ref</code> commit <code>4baf997394629ad
 | apple | official-primary | docc-json | Research Variant | <code>apple/wiki/sources/apple-private-cloud-compute/vreresearchvariant.md</code> | [canonical](https://security.apple.com/documentation/private-cloud-compute/vreresearchvariant) |
 | apple | official-primary | docc-json | Get Started with the VRE | <code>apple/wiki/sources/apple-private-cloud-compute/vresetup.md</code> | [canonical](https://security.apple.com/documentation/private-cloud-compute/vresetup) |
 | apple | official-primary | docc-json | Shadow Tunneling | <code>apple/wiki/sources/apple-private-cloud-compute/vreshadow.md</code> | [canonical](https://security.apple.com/documentation/private-cloud-compute/vreshadow) |
-| apple | official-primary | security-blog | Private Cloud Compute: A new frontier for AI privacy in the cloud | <code>apple/wiki/sources/apple-official-blog/private-cloud-compute.md</code> | [canonical](https://security.apple.com/blog/private-cloud-compute/) |
-| apple | official-primary | security-blog | Expanding Private Cloud Compute | <code>apple/wiki/sources/apple-official-blog/expanding-pcc.md</code> | [canonical](https://security.apple.com/blog/expanding-pcc/) |
-| apple | official-primary | security-blog | Security research on Private Cloud Compute | <code>apple/wiki/sources/apple-official-blog/pcc-security-research.md</code> | [canonical](https://security.apple.com/blog/pcc-security-research/) |
-| meta | official-primary | engineering-blog | Building Private Processing for AI tools on WhatsApp | <code>meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md</code> | [canonical](https://engineering.fb.com/2025/04/29/security/whatsapp-private-processing-ai-tools/) |
+| cross-vendor | synthesis | comparison | Architecture Boundary: Where Processing Happens | <code>cross-vendor/wiki/comparisons/architecture-boundary.md</code> |  |
+| cross-vendor | synthesis | comparison | Transparency and Verifiability: Researcher Access Models | <code>cross-vendor/wiki/comparisons/transparency-and-verifiability.md</code> |  |
+| cross-vendor | synthesis | concept | Apple Private Cloud Compute | <code>cross-vendor/wiki/concepts/apple-private-cloud-compute.md</code> |  |
+| cross-vendor | synthesis | concept | Google Private Compute Core / Private AI | <code>cross-vendor/wiki/concepts/google-private-compute-core.md</code> |  |
+| cross-vendor | synthesis | concept | Meta Private Processing | <code>cross-vendor/wiki/concepts/meta-private-processing.md</code> |  |
+| cross-vendor | synthesis | concept | Non-Targetability | <code>cross-vendor/wiki/concepts/non-targetability.md</code> |  |
+| cross-vendor | synthesis | concept | Remote Attestation | <code>cross-vendor/wiki/concepts/remote-attestation.md</code> |  |
+| cross-vendor | synthesis | concept | Stateless Inference and Data Retention | <code>cross-vendor/wiki/concepts/stateless-inference.md</code> |  |
+| cross-vendor | synthesis | concept | Verifiable Transparency | <code>cross-vendor/wiki/concepts/verifiable-transparency.md</code> |  |
+| cross-vendor | synthesis | index | Cross-Vendor Private AI Wiki | <code>cross-vendor/wiki/index.md</code> |  |
+| google | official-primary | security-blog | Android's private AI approach | <code>google/wiki/sources/google-private-ai/android-private-ai-approach.md</code> | [canonical](https://security.googleblog.com/2024/08/android-private-ai-approach.html) |
+| google | official-primary | github-repo | google/private-compute-services | <code>google/wiki/sources/google-private-ai/google_private-compute-services.md</code> | [canonical](https://github.com/google/private-compute-services) |
+| google | official-primary | security-blog | Introducing Android's Private Compute Core | <code>google/wiki/sources/google-private-ai/introducing-androids-private-compute.md</code> | [canonical](https://security.googleblog.com/2021/09/introducing-androids-private-compute.html) |
+| google | official-primary | github-repo | project-oak/oak | <code>google/wiki/sources/google-private-ai/project-oak_oak.md</code> | [canonical](https://github.com/project-oak/oak) |
+| google | official-primary | security-blog | Trust in transparency: Private Compute Core | <code>google/wiki/sources/google-private-ai/trust-in-transparency-private-compute.md</code> | [canonical](https://security.googleblog.com/2022/12/trust-in-transparency-private-compute.html) |
 | meta | official-primary | engineering-blog | Five security principles for billions of messages across Meta's apps | <code>meta/wiki/sources/meta-private-processing/five-security-principles-for-billions-of-messages-across-metas-apps.md</code> | [canonical](https://engineering.fb.com/2022/07/28/security/five-security-principles-for-billions-of-messages-across-metas-apps/) |
-| meta | official-primary | engineering-blog | Deploying key transparency at WhatsApp | <code>meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md</code> | [canonical](https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/) |
-| meta | official-primary | engineering-blog | IPLS: Privacy-preserving storage for your WhatsApp contacts | <code>meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md</code> | [canonical](https://engineering.fb.com/2024/10/22/security/ipls-privacy-preserving-storage-for-your-whatsapp-contacts/) |
 | meta | official-primary | engineering-blog | Incognito Chat on WhatsApp with Meta AI | <code>meta/wiki/sources/meta-private-processing/incognito-chat-whatsapp-meta-ai.md</code> | [canonical](https://about.fb.com/news/2026/05/incognito-chat-whatsapp-meta-ai/) |
 | meta | official-primary | engineering-blog | Introducing Advanced Chat Privacy | <code>meta/wiki/sources/meta-private-processing/introducing-advanced-chat-privacy.md</code> | [canonical](https://blog.whatsapp.com/introducing-advanced-chat-privacy) |
+| meta | official-primary | engineering-blog | IPLS: Privacy-preserving storage for your WhatsApp contacts | <code>meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md</code> | [canonical](https://engineering.fb.com/2024/10/22/security/ipls-privacy-preserving-storage-for-your-whatsapp-contacts/) |
 | meta | official-primary | whitepaper | Private Processing for WhatsApp Overview | <code>meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md</code> | [canonical](https://ai.meta.com/static-resource/private-processing-technical-whitepaper) |
-| google | official-primary | security-blog | Android's private AI approach | <code>google/wiki/sources/google-private-ai/android-private-ai-approach.md</code> | [canonical](https://security.googleblog.com/2024/08/android-private-ai-approach.html) |
-| google | official-primary | security-blog | Trust in transparency: Private Compute Core | <code>google/wiki/sources/google-private-ai/trust-in-transparency-private-compute.md</code> | [canonical](https://security.googleblog.com/2022/12/trust-in-transparency-private-compute.html) |
-| google | official-primary | security-blog | Introducing Android's Private Compute Core | <code>google/wiki/sources/google-private-ai/introducing-androids-private-compute.md</code> | [canonical](https://security.googleblog.com/2021/09/introducing-androids-private-compute.html) |
-| google | official-primary | github-repo | google/private-compute-services | <code>google/wiki/sources/google-private-ai/google_private-compute-services.md</code> | [canonical](https://github.com/google/private-compute-services) |
-| google | official-primary | github-repo | project-oak/oak | <code>google/wiki/sources/google-private-ai/project-oak_oak.md</code> | [canonical](https://github.com/project-oak/oak) |
+| meta | official-primary | engineering-blog | Deploying key transparency at WhatsApp | <code>meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md</code> | [canonical](https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/) |
+| meta | official-primary | engineering-blog | Building Private Processing for AI tools on WhatsApp | <code>meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md</code> | [canonical](https://engineering.fb.com/2025/04/29/security/whatsapp-private-processing-ai-tools/) |
 
