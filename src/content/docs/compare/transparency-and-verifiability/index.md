@@ -19,7 +19,7 @@ All three systems bind trust to externally inspectable or logged software, but t
 <h3>Transparency and Verifiability synthesis</h3>
 <p>Cross-vendor synthesis comparing researcher access and transparency models.</p>
 <p><span class="evidence-pill">synthesis</span> <span class="evidence-pill">comparison</span></p>
-<p class="source-path">[cross-vendor/wiki/comparisons/transparency-and-verifiability.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/cross-vendor/wiki/comparisons/transparency-and-verifiability.md)</p>
+<p class="source-path"><code>cross-vendor/wiki/comparisons/transparency-and-verifiability.md</code></p>
 </article>
 </div>
 

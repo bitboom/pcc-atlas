@@ -5,7 +5,13 @@ import { dirname } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const docsRoot = join(root, 'src', 'content', 'docs');
-const pccRoot = join(root, 'data', 'pcc-ref');
+const pccCandidates = [
+  process.env.PCC_REF_DIR,
+  join(root, '..', 'pcc-ref'),
+  join(root, 'data', 'pcc-ref')
+].filter(Boolean);
+const pccRoot = pccCandidates.find((candidate) => existsSync(join(candidate, 'apple', 'sources.json')));
+const allowMissingPccRef = process.env.PCC_ATLAS_ALLOW_MISSING_PCC_REF === '1';
 
 function walk(dir, acc = []) {
   for (const name of readdirSync(dir)) {
@@ -21,6 +27,10 @@ const docs = walk(docsRoot).filter((p) => p.endsWith('.md') || p.endsWith('.mdx'
 const errors = [];
 let refCount = 0;
 
+if (!pccRoot && !allowMissingPccRef) {
+  errors.push(`pcc-ref corpus not found. Set PCC_REF_DIR or set PCC_ATLAS_ALLOW_MISSING_PCC_REF=1 for generated-only CI validation. Tried: ${pccCandidates.join(', ')}`);
+}
+
 for (const doc of docs) {
   const text = readFileSync(doc, 'utf8');
   const matches = [...text.matchAll(/data-pcc-ref="([^"]+)"/g)];
@@ -31,7 +41,7 @@ for (const doc of docs) {
       errors.push(`${relative(root, doc)} has unsafe source path ${sourcePath}`);
       continue;
     }
-    if (!existsSync(join(pccRoot, sourcePath))) {
+    if (pccRoot && !existsSync(join(pccRoot, sourcePath))) {
       errors.push(`${relative(root, doc)} references missing pcc-ref path ${sourcePath}`);
     }
   }
@@ -48,4 +58,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Evidence validation passed: ${docs.length} docs, ${refCount} data-pcc-ref links.`);
+console.log(`Evidence validation passed: ${docs.length} docs, ${refCount} data-pcc-ref links${pccRoot ? '' : ' (generated-only mode; corpus checkout missing)'}.`);

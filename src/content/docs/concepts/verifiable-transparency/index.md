@@ -15,7 +15,7 @@ This concept page is sourced from the pinned cross-vendor synthesis corpus. The 
 <h3>Verifiable Transparency</h3>
 <p>How public logs, reproducible builds, or researcher tooling make claims checkable.</p>
 <p><span class="evidence-pill">synthesis</span> <span class="evidence-pill">concept</span></p>
-<p class="source-path">[cross-vendor/wiki/concepts/verifiable-transparency.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/cross-vendor/wiki/concepts/verifiable-transparency.md)</p>
+<p class="source-path"><code>cross-vendor/wiki/concepts/verifiable-transparency.md</code></p>
 </article>
 </div>
 

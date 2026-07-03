@@ -38,25 +38,25 @@ Meta Private Processing is an optional WhatsApp capability for AI features such 
 <h3>Building Private Processing for AI tools on WhatsApp</h3>
 <p>The foundational Private Processing announcement: secure enclave-based, open-source-backed AI processing for WhatsApp.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">engineering-blog</span></p>
-<p class="source-path">[meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md)</p>
+<p class="source-path"><code>meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md">
 <h3>Deploying key transparency at WhatsApp</h3>
 <p>Key transparency deployment at WhatsApp; auditable key directory relevant to Private Processing trust model.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">engineering-blog</span></p>
-<p class="source-path">[meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md)</p>
+<p class="source-path"><code>meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md">
 <h3>IPLS: Privacy-preserving storage for your WhatsApp contacts</h3>
 <p>Identity Provider Linked Storage; privacy-preserving contact storage precedent for Private Processing.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">engineering-blog</span></p>
-<p class="source-path">[meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md)</p>
+<p class="source-path"><code>meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md">
 <h3>Private Processing for WhatsApp Overview</h3>
 <p>Official Meta technical whitepaper detailing the Private Processing architecture, threat model, and security design.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">whitepaper</span></p>
-<p class="source-path">[meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md)</p>
+<p class="source-path"><code>meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md</code></p>
 </article>
 </div>
 

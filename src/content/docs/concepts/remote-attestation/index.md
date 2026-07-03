@@ -15,7 +15,7 @@ This concept page is sourced from the pinned cross-vendor synthesis corpus. The 
 <h3>Remote Attestation</h3>
 <p>How clients verify what code and hardware they are talking to.</p>
 <p><span class="evidence-pill">synthesis</span> <span class="evidence-pill">concept</span></p>
-<p class="source-path">[cross-vendor/wiki/concepts/remote-attestation.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/cross-vendor/wiki/concepts/remote-attestation.md)</p>
+<p class="source-path"><code>cross-vendor/wiki/concepts/remote-attestation.md</code></p>
 </article>
 </div>
 

@@ -20,7 +20,7 @@ The architecture boundary is the physical and logical place where sensitive data
 <h3>Architecture Boundary synthesis</h3>
 <p>Cross-vendor synthesis comparing where Apple, Meta, and Google place sensitive processing boundaries.</p>
 <p><span class="evidence-pill">synthesis</span> <span class="evidence-pill">comparison</span></p>
-<p class="source-path">[cross-vendor/wiki/comparisons/architecture-boundary.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/cross-vendor/wiki/comparisons/architecture-boundary.md)</p>
+<p class="source-path"><code>cross-vendor/wiki/comparisons/architecture-boundary.md</code></p>
 </article>
 </div>
 

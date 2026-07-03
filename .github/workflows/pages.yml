@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -31,8 +29,12 @@ jobs:
         run: npm ci
       - name: Test
         run: npm test
+      - name: Validate generated evidence links
+        run: npm run validate:evidence
+        env:
+          PCC_ATLAS_ALLOW_MISSING_PCC_REF: '1'
       - name: Build
-        run: npm run build
+        run: npm run build:ci
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

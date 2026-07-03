@@ -38,37 +38,37 @@ Apple PCC is the cloud compute path for Apple Intelligence requests that need se
 <h3>Core Security &amp; Privacy Requirements</h3>
 <p>Dive into understanding PCC by learning about the extraordinary security requirements of the system.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">docc-json</span></p>
-<p class="source-path">[apple/wiki/sources/apple-private-cloud-compute/corerequirements.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/apple/wiki/sources/apple-private-cloud-compute/corerequirements.md)</p>
+<p class="source-path"><code>apple/wiki/sources/apple-private-cloud-compute/corerequirements.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md">
 <h3>Hardware Root of Trust</h3>
 <p>Custom-built server hardware ensures security properties are immutable.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">docc-json</span></p>
-<p class="source-path">[apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md)</p>
+<p class="source-path"><code>apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="apple/wiki/sources/apple-private-cloud-compute/nontargetability.md">
 <h3>Non-Targetability</h3>
 <p>PCC is designed to ensure that an attacker cannot target specific PCC users.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">docc-json</span></p>
-<p class="source-path">[apple/wiki/sources/apple-private-cloud-compute/nontargetability.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/apple/wiki/sources/apple-private-cloud-compute/nontargetability.md)</p>
+<p class="source-path"><code>apple/wiki/sources/apple-private-cloud-compute/nontargetability.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="apple/wiki/sources/apple-private-cloud-compute/requestflow.md">
 <h3>Request Flow</h3>
 <p>Anonymous request routing is designed to ensure non-targetability.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">docc-json</span></p>
-<p class="source-path">[apple/wiki/sources/apple-private-cloud-compute/requestflow.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/apple/wiki/sources/apple-private-cloud-compute/requestflow.md)</p>
+<p class="source-path"><code>apple/wiki/sources/apple-private-cloud-compute/requestflow.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md">
 <h3>Stateless Computation and Enforceable Guarantees</h3>
 <p>The PCC node is designed to safeguard user data and enforce it is not retained once request processing is complete.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">docc-json</span></p>
-<p class="source-path">[apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md)</p>
+<p class="source-path"><code>apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md</code></p>
 </article>
 <article class="evidence-card" data-pcc-ref="apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md">
 <h3>Verifiable Transparency</h3>
 <p>Security researchers can verify the PCC privacy and security guarantees.</p>
 <p><span class="evidence-pill">official-primary</span> <span class="evidence-pill">docc-json</span></p>
-<p class="source-path">[apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md](https://github.com/bitboom/pcc-ref/blob/4baf997394629ad6e39790e38ede3a7768fa2f35/apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md)</p>
+<p class="source-path"><code>apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md</code></p>
 </article>
 </div>
 

@@ -1,10 +1,18 @@
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const pccRoot = join(root, 'data', 'pcc-ref');
+const pccCandidates = [
+  process.env.PCC_REF_DIR,
+  join(root, '..', 'pcc-ref'),
+  join(root, 'data', 'pcc-ref')
+].filter(Boolean);
+const pccRoot = pccCandidates.find((candidate) => existsSync(join(candidate, 'apple', 'sources.json')));
+if (!pccRoot) {
+  throw new Error(`pcc-ref corpus not found. Set PCC_REF_DIR to a local checkout. Tried: ${pccCandidates.join(', ')}`);
+}
 const docsRoot = join(root, 'src', 'content', 'docs');
 const dataRoot = join(root, 'src', 'data');
 
@@ -23,7 +31,7 @@ function writeDoc(slug, body) {
 }
 
 function relLink(path, label = path) {
-  return `[${label}](https://github.com/bitboom/pcc-ref/blob/${commit}/${path})`;
+  return `<code>${escapeHtml(label === path ? path : label)}</code>`;
 }
 
 function sourceAttr(path) {
@@ -309,7 +317,7 @@ ${sourceCard({ title, summary: description, tier: 'synthesis', kind: 'concept', 
 
 const allSources = Object.entries(sources).flatMap(([vendor, entries]) => entries.map((entry) => ({ vendor, ...entry })));
 const evidenceRows = allSources.map((entry) => {
-  const rendered = entry.render_target ? relLink(entry.render_target, 'rendered source') : 'not rendered';
+  const rendered = entry.render_target ? relLink(entry.render_target) : 'not rendered';
   const canon = entry.canonical_url ? `[canonical](${entry.canonical_url})` : '';
   return `| ${entry.vendor} | ${entry.tier} | ${entry.kind} | ${entry.title.replaceAll('|', '\\|')} | ${rendered} | ${canon} |`;
 }).join('\n');
