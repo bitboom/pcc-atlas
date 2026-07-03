@@ -1,0 +1,13 @@
+{
+  "pccRefRemote": "https://github.com/bitboom/pcc-ref.git",
+  "pccRefCommit": "4baf997394629ad6e39790e38ede3a7768fa2f35",
+  "generatedAt": "2026-07-03T09:53:33.307Z",
+  "counts": {
+    "apple": 42,
+    "meta": 7,
+    "google": 5
+  },
+  "totalSources": 54,
+  "conceptCount": 7,
+  "comparisonCount": 2
+}

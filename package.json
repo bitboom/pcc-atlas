@@ -1,0 +1,20 @@
+{
+  "name": "pcc-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:pcc-ref": "node scripts/sync-pcc-ref.mjs",
+    "validate:evidence": "node scripts/validate-evidence.mjs",
+    "prebuild": "npm run sync:pcc-ref && npm run validate:evidence",
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "latest",
+    "astro": "latest"
+  },
+  "devDependencies": {}
+}

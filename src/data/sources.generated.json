@@ -1,0 +1,1685 @@
+{
+  "apple": [
+    {
+      "id": "apple-methodology-boris-llm-wiki",
+      "vendor": "apple",
+      "product": "methodology",
+      "tier": "methodology",
+      "evidence_score": 100,
+      "kind": "llm-wiki-pattern",
+      "title": "Boris LLM Wiki pattern",
+      "summary": "Official Boris LLM Wiki gist; the wiki-building methodology this corpus follows.",
+      "canonical_url": "https://gist.github.com/borisush/81330ff1f2bb4e142e83fbbf17f5e2d0",
+      "machine_url": "https://gist.githubusercontent.com/borisush/81330ff1f2bb4e142e83fbbf17f5e2d0/raw/llm-wiki.md",
+      "handler": "manual",
+      "raw_targets": [
+        "markdown"
+      ],
+      "render_target": "apple/wiki/raw/methodology/boris-llm-wiki.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "LLM Wiki"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "gist.github.com"
+      },
+      "fetched_at": "2026-06-29T13:25:33+00:00",
+      "source_sha256": "dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401"
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_appleintelligencereport",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: Apple Intelligence Report",
+      "summary": "The transparency data available on client devices.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_appleintelligencereport",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_appleintelligencereport.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_appleintelligencereport.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "283170d41c57e042bce40795078019cff478022310df5319b7751a26d0d35eab",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_attestationbundle",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: Attestation Bundle Contents",
+      "summary": "The contents and validation of an attestation bundle.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_attestationbundle",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_attestationbundle.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_attestationbundle.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "88b430fc2244141dbc4ce50c50fb3c081ffcd7f9199058ba1d950903174dc78b",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_secureboot",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: Secure Boot Tags",
+      "summary": "The format of an Image4 manifest.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_secureboot",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_secureboot.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_secureboot.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "e4b257b0fbb301d8d415844db6977b41f41d166607c97ceabf151e2c13c305ed",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_systemconfig",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: System Configuration",
+      "summary": "The node’s configuration parameters.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_systemconfig",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_systemconfig.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_systemconfig.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "b3f6e7f1113eec88d56b69d0fdb955c43c8ec7745d53cf51080a02a8a3b75ed5",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_transparencylog",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: Transparency Log",
+      "summary": "The protocol for communication with the transparency log service.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_transparencylog",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_transparencylog.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_transparencylog.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "ad236bf3ddd33f3055d81ee760674395415abb9b38e987c8cfd7ceb591738331",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_trustcache",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: Trust Cache Format",
+      "summary": "The internal structure of a TrustCache.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_trustcache",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_trustcache.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_trustcache.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "0452fb9f913c1ea1442995e7c4901e95c4691c7d5332bfcea02e759cb68f4660",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-appendix_uniqtags",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Appendix: Secure Boot Ticket Canonicalization",
+      "summary": "The construction of a release from an Image4 ticket.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/appendix_uniqtags",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/appendix_uniqtags.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/appendix_uniqtags.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "b4d8799b460147ec98e7f5e44a1f8132cc9a04f3a666f5a3f7708e2309180055",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-attacks",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Anticipating Attacks",
+      "summary": "How PCC’s security and privacy mechanisms stand up to anticipated threats.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/attacks",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/attacks.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/attacks.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "026765c9fd16f3d7c03b87fa6ac8e0418cef75622a446599009d4fa99680e1bd",
+      "section": "Security Analysis",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-corerequirements",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Core Security & Privacy Requirements",
+      "summary": "Dive into understanding PCC by learning about the extraordinary security requirements of the system.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/corerequirements",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/corerequirements.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/corerequirements.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "95ef5938488b69ad8def1e8e1b9742adc19f4c2f85c98396d183d047ee06cf03",
+      "section": "Core Requirements",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-hardwareintegrity",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Hardware Integrity",
+      "summary": "Hardware used for PCC is subject to rigorous security processes.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/hardwareintegrity",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/hardwareintegrity.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/hardwareintegrity.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "53eea0f31642060d233c62fd9b19f9db65c809376a725096863a47e45bb48ca0",
+      "section": "Hardware and Software",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-hardwarerootoftrust",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Hardware Root of Trust",
+      "summary": "Custom-built server hardware ensures security properties are immutable.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/hardwarerootoftrust",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/hardwarerootoftrust.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/hardwarerootoftrust.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "9934062f8336cc051ed1e33c7dece2c3cfaed2cb37cf4a0331d252d4d72c78be",
+      "section": "Hardware and Software",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-inspectingreleases",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Inspecting Releases",
+      "summary": "Use the VRE tools to inspect releases in the transparency log.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/inspectingreleases",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/inspectingreleases.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/inspectingreleases.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "66c6a6d8fd0d1f2156e6d7a14b33f482e538d8f1f758ca5cefb7934716a25a11",
+      "section": "Virtual Research Environment",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-management",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Management & Operations",
+      "summary": "PCC nodes support privacy-aware management, observation, and debug capabilities.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/management",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/management.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/management.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "55ca02ed8a8d6a31f118e333204654a33d28f410a6fd7044f2a03e0e70d78ad2",
+      "section": "Transparency and Management",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-navigation",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Navigating the Security Guide",
+      "summary": "",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/navigation",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/navigation.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/navigation.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "e4dfe94d457ff5e5527bf94f042dd0572e72a370324b4e1f5388d85f6e4c03d3",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-nontargetability",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Non-Targetability",
+      "summary": "PCC is designed to ensure that an attacker cannot target specific PCC users.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/nontargetability",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/nontargetability.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/nontargetability.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "679b95aaa37f6189241a227eeb4e20282dd92cf7987051484adfe8c4fb591ce9",
+      "section": "Core Requirements",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-noprivilegedaccess",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "No Privileged Runtime Access",
+      "summary": "PCC is designed without privileged interfaces that might expose user data.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/noprivilegedaccess",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/noprivilegedaccess.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/noprivilegedaccess.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "15cedf5c298ac2626923564f4e5b7954026913f324a1c14dc6f54229f56669e3",
+      "section": "Core Requirements",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-pccagent",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "PCC Agent",
+      "summary": "PCC Agent executes application-specific workflows on proxy nodes, coordinating tool invocations across PCC nodes.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/pccagent",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/pccagent.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/pccagent.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "031efd894e9f68572473a2d1e6099025047f29e5f8adb3c60993e047d9bcd126",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-pir",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Private Information Retrieval",
+      "summary": "A cryptographic technique for retrieving data from servers outside the PCC trust boundary without revealing which records were accessed.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/pir",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/pir.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/pir.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "ec0d107c9083d0b6ada0a6ed0b038bb574e3afe7e3a17d36c2e15e8228e4e426",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-private-cloud-compute",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Private Cloud Compute Security Guide",
+      "summary": "",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/private-cloud-compute.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "834b406c82569d949b0dc5d5afe776b682e37b3ed78cfb06fd112ffafe06b65b",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-releasenotes",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Release Notes",
+      "summary": "PCC Software Release Notes.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/releasenotes",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/releasenotes.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/releasenotes.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "1b468a533e50a461396d9a36c26ad08d23403230702de1522a47f4f3d7c9a61b",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-releasetransparency",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Release Transparency",
+      "summary": "PCC attestation capabilities support independently verifiable transparency.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/releasetransparency",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/releasetransparency.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/releasetransparency.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "292f9b298561fed755f05256988305468c400bb7c9e442717c9b4e6aa4e4e131",
+      "section": "Transparency and Management",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-reportingissues",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Reporting Issues",
+      "summary": "Reporting issues with Private Cloud Compute.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/reportingissues",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/reportingissues.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/reportingissues.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "0be6f548c9aa626629ad6b78867be2089742f4d6c7141dbcdc876b229d597b49",
+      "section": "Reference",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-requestflow",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Request Flow",
+      "summary": "Anonymous request routing is designed to ensure non-targetability.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/requestflow",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/requestflow.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/requestflow.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "48af9e1daa5ec380624cb4fc2356f59ebb9aece0fdd4d98598533ff995bb7658",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-requesthandling",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Attested Request Handling",
+      "summary": "We designed the PCC application protocol to preserve client anonymity and efficiently route traffic through the PCC fleet.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/requesthandling",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/requesthandling.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/requesthandling.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "068a69b0411aa8af21ebd7797410f1fe557f336351ba47b9881ad0abf08b6d16",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-runtimeconfigassets",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Runtime Configuration and Assets",
+      "summary": "PCC supports runtime-configurable properties and cloud-distributed assets to manage node behavior during boot sessions.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/runtimeconfigassets",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/runtimeconfigassets.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/runtimeconfigassets.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "6ef9191adec580f01f2f93933661c05614f6c76301a93ab184ee960b35834834",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-softwarefoundations",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Software Foundations",
+      "summary": "PCC nodes run a purpose-built operating system designed for protecting user data.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/softwarefoundations",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/softwarefoundations.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/softwarefoundations.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "95907b14e2234df071b211804c2e28b9cce42e5ca4a734095b403f840acf07e3",
+      "section": "Hardware and Software",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-softwarelayering",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Software Layering",
+      "summary": "The PCC node software is designed to ensure transparency of all components.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/softwarelayering",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/softwarelayering.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/softwarelayering.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "a4047c2ed3e5a8eb564ff380d6388222601dd331c20680cd32772a0ce19258fa",
+      "section": "Hardware and Software",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-sourcecode",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Source Code",
+      "summary": "To simplify security research, source code is available for certain security-critical PCC components.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/sourcecode",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/sourcecode.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/sourcecode.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "66afb2922a10855b2a5744d0082dc5fb1489bf1bd1794c8926fa70ca9d8bbf14",
+      "section": "Security Analysis",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-statelessandenforcable",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Stateless Computation and Enforceable Guarantees",
+      "summary": "The PCC node is designed to safeguard user data and enforce it is not retained once request processing is complete.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/statelessandenforcable",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/statelessandenforcable.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/statelessandenforcable.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "b0956ca94bc7da0ff9f852a74ac3ea9a1fc434e4afeee24b1b0728ab2ef8544a",
+      "section": "Core Requirements",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-statelessinference",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Stateless Inference",
+      "summary": "The PCC inference engine enables high performance while keeping user data private.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/statelessinference",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/statelessinference.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/statelessinference.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "7947122ec4642d2ecfa9be94ebfd2707bfa55026bec98b508ddbd6db508ad02a",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-transitivetrust",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Transitive Trust",
+      "summary": "PCC nodes establish transitive trust in other nodes by validating attestations on behalf of a user’s device.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/transitivetrust",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/transitivetrust.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/transitivetrust.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "06b54612e3cfc429d94c378aeca686df9648a7fc55a9a36600522063a1d1fba6",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-verifiabletransparency",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Verifiable Transparency",
+      "summary": "Security researchers can verify the PCC privacy and security guarantees.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/verifiabletransparency",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/verifiabletransparency.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/verifiabletransparency.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "e6edade6602f7b7d1c57493ab59d6188126c883733fd444e88cd6a6010c34808",
+      "section": "Core Requirements",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-virtualresearchenvironment",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Virtual Research Environment",
+      "summary": "Interact with and debug the PCC software stack.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/virtualresearchenvironment",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/virtualresearchenvironment.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/virtualresearchenvironment.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "d8bac4c40a7060d43aca5d4d789236e8dd2845644a5f22718bfddf65c277faa2",
+      "section": "Virtual Research Environment",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-visuallookup",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Visual Lookup",
+      "summary": "Privacy-preserving lookup of visual entities using embedding-based search and private information retrieval (PIR).",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/visuallookup",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/visuallookup.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/visuallookup.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "7d8bdd753c833c2f0734d673b313fd79ae6e718e7a94921d2039053d83f14a97",
+      "section": "Request Processing",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-vreinteraction",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Interact with the VRE",
+      "summary": "Issue requests to and configure the VRE.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/vreinteraction",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/vreinteraction.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/vreinteraction.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "911f00f4aa29ca2f4dca16a7e4230845e75b08e4c65ee61bcd12fa0a25bcfbae",
+      "section": "Virtual Research Environment",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-vreresearchvariant",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Research Variant",
+      "summary": "Use the research variant to dive deeper into PCC.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/vreresearchvariant",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/vreresearchvariant.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/vreresearchvariant.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "cce731a58a7cd757582d96e98163762af6fdbabd8aff085b5ff8ed2767191bad",
+      "section": "Virtual Research Environment",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-vresetup",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Get Started with the VRE",
+      "summary": "Configure your system to run the PCC Virtual Research Environment (VRE).",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/vresetup",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/vresetup.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/vresetup.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "8a4837ba6c0c25cdd11cc4993de2e34eab947a11472fd9f06f68d2ebe9221914",
+      "section": "Virtual Research Environment",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-private-cloud-compute-vreshadow",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "docc-json",
+      "title": "Shadow Tunneling",
+      "summary": "Replace compute cloud apps with controllable proxies to exercise arbitrary behaviors in the VRE.",
+      "canonical_url": "https://security.apple.com/documentation/private-cloud-compute/vreshadow",
+      "machine_url": "https://security.apple.com/data/documentation/private-cloud-compute/vreshadow.json",
+      "handler": "apple-docc",
+      "raw_targets": [
+        "json",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-private-cloud-compute/vreshadow.md",
+      "expected": {
+        "status": 200
+      },
+      "provenance": {
+        "discovered_by": "apple-docc-inventory",
+        "official_domain": "security.apple.com"
+      },
+      "fetched_at": "2026-06-29T13:26:22+00:00",
+      "source_sha256": "bea27e2e3a48d2b0c281d73881f7f457efccd700c1f5a5f7bfcfe3714a4dc700",
+      "section": "Virtual Research Environment",
+      "linked_sources": [
+        "apple-methodology-boris-llm-wiki"
+      ]
+    },
+    {
+      "id": "apple-pcc-blog-new-frontier-2024-06",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "security-blog",
+      "title": "Private Cloud Compute: A new frontier for AI privacy in the cloud",
+      "summary": "The original PCC announcement: Apple's cloud intelligence system bringing foundation models to Apple Intelligence with breakthrough privacy.",
+      "canonical_url": "https://security.apple.com/blog/private-cloud-compute/",
+      "handler": "generic-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-official-blog/private-cloud-compute.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Cloud Compute",
+          "Apple Intelligence"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "secondary-search",
+        "official_domain": "security.apple.com"
+      },
+      "date": "2024-06-10",
+      "source_sha256": "f4ead309193393ab3d9ef4232bedd4b39765a7b3023919a3dbd98771e0e1fc47",
+      "fetched_at": "2026-06-29T21:29:14+00:00"
+    },
+    {
+      "id": "apple-pcc-blog-expanding-pcc",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "security-blog",
+      "title": "Expanding Private Cloud Compute",
+      "summary": "Expansion of PCC beyond Apple's data centers for next-generation Apple Intelligence.",
+      "canonical_url": "https://security.apple.com/blog/expanding-pcc/",
+      "handler": "generic-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-official-blog/expanding-pcc.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Cloud Compute"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "secondary-search",
+        "official_domain": "security.apple.com"
+      },
+      "date": "",
+      "source_sha256": "8b591d5774c0c0427bf9aaf5158b24851164825cf1b7fb1fc7865ca365dc0d01",
+      "fetched_at": "2026-06-29T21:29:14+00:00"
+    },
+    {
+      "id": "apple-pcc-blog-security-research",
+      "vendor": "apple",
+      "product": "private-cloud-compute",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "security-blog",
+      "title": "Security research on Private Cloud Compute",
+      "summary": "VRE release, third-party auditor early access, and the security research program for PCC.",
+      "canonical_url": "https://security.apple.com/blog/pcc-security-research/",
+      "handler": "generic-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "apple/wiki/sources/apple-official-blog/pcc-security-research.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Cloud Compute",
+          "Virtual Research Environment"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "secondary-search",
+        "official_domain": "security.apple.com"
+      },
+      "date": "",
+      "source_sha256": "233e9ea47ecb980da5ee1b9882c5a4ad096a1bcd6c7f1d5f8120f9408a441c4e",
+      "fetched_at": "2026-06-29T21:29:14+00:00"
+    }
+  ],
+  "meta": [
+    {
+      "id": "meta-whatsapp-private-processing-2025-04-29",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "engineering-blog",
+      "title": "Building Private Processing for AI tools on WhatsApp",
+      "summary": "The foundational Private Processing announcement: secure enclave-based, open-source-backed AI processing for WhatsApp.",
+      "canonical_url": "https://engineering.fb.com/2025/04/29/security/whatsapp-private-processing-ai-tools/",
+      "machine_url": "https://engineering.fb.com/wp-json/wp/v2/posts/22434",
+      "handler": "wordpress-rest",
+      "raw_targets": [
+        "json",
+        "html",
+        "images"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/whatsapp-private-processing-ai-tools.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Processing",
+          "WhatsApp",
+          "AI"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "engineering.fb.com"
+      },
+      "date": "2025-04-29",
+      "source_sha256": "db1dd78a441ed919dae1bc44784a7a5aa001a58709a6494a55db40ca7a198c2e",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    },
+    {
+      "id": "meta-whatsapp-five-security-principles-2022-07-28",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "engineering-blog",
+      "title": "Five security principles for billions of messages across Meta's apps",
+      "summary": "Meta's five security principles underlying messaging at scale; context for Private Processing.",
+      "canonical_url": "https://engineering.fb.com/2022/07/28/security/five-security-principles-for-billions-of-messages-across-metas-apps/",
+      "machine_url": "https://engineering.fb.com/wp-json/wp/v2/posts/18907",
+      "handler": "wordpress-rest",
+      "raw_targets": [
+        "json",
+        "html",
+        "images"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/five-security-principles-for-billions-of-messages-across-metas-apps.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "security",
+          "Meta"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "engineering.fb.com"
+      },
+      "date": "2022-07-28",
+      "source_sha256": "9b1c67471b15008841153fe3743ce11fb924d603c5d03b9e0bfda47bba36d658",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    },
+    {
+      "id": "meta-whatsapp-key-transparency-2023-04-13",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "engineering-blog",
+      "title": "Deploying key transparency at WhatsApp",
+      "summary": "Key transparency deployment at WhatsApp; auditable key directory relevant to Private Processing trust model.",
+      "canonical_url": "https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/",
+      "machine_url": "https://engineering.fb.com/wp-json/wp/v2/posts/20224",
+      "handler": "wordpress-rest",
+      "raw_targets": [
+        "json",
+        "html",
+        "images"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/whatsapp-key-transparency.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "key transparency",
+          "WhatsApp"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "engineering.fb.com"
+      },
+      "date": "2023-04-13",
+      "source_sha256": "67ac95a7ac703597464734f614ae5b330b573b3068946353cd6d62654fdbdea9",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    },
+    {
+      "id": "meta-whatsapp-ipls-2024-10-22",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "engineering-blog",
+      "title": "IPLS: Privacy-preserving storage for your WhatsApp contacts",
+      "summary": "Identity Provider Linked Storage; privacy-preserving contact storage precedent for Private Processing.",
+      "canonical_url": "https://engineering.fb.com/2024/10/22/security/ipls-privacy-preserving-storage-for-your-whatsapp-contacts/",
+      "machine_url": "https://engineering.fb.com/wp-json/wp/v2/posts/21812",
+      "handler": "wordpress-rest",
+      "raw_targets": [
+        "json",
+        "html",
+        "images"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/ipls-privacy-preserving-storage-for-your-whatsapp-contacts.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "IPLS",
+          "WhatsApp"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "engineering.fb.com"
+      },
+      "date": "2024-10-22",
+      "source_sha256": "b7714744b9b6ff386b8a9713da073cb006e8d05e16974a78dfb6fd922cbcf9b5",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    },
+    {
+      "id": "meta-whatsapp-incognito-chat-2026-05",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "engineering-blog",
+      "title": "Incognito Chat on WhatsApp with Meta AI",
+      "summary": "Incognito Chat announcement; Private Processing applied to Meta AI conversations.",
+      "canonical_url": "https://about.fb.com/news/2026/05/incognito-chat-whatsapp-meta-ai/",
+      "machine_url": "https://about.fb.com/wp-json/wp/v2/posts?slug=incognito-chat-whatsapp-meta-ai",
+      "handler": "wordpress-rest",
+      "raw_targets": [
+        "json",
+        "html",
+        "images"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/incognito-chat-whatsapp-meta-ai.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Incognito",
+          "WhatsApp"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "about.fb.com"
+      },
+      "date": "2026-05",
+      "source_sha256": "6853a1c1ba93fba200b6b92f38a71ef314b60d46632428eacf821f13131698f1",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    },
+    {
+      "id": "whatsapp-blog-advanced-chat-privacy",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "engineering-blog",
+      "title": "Introducing Advanced Chat Privacy",
+      "summary": "WhatsApp blog post on Advanced Chat Privacy; related account-protection feature.",
+      "canonical_url": "https://blog.whatsapp.com/introducing-advanced-chat-privacy",
+      "machine_url": "",
+      "handler": "generic-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/introducing-advanced-chat-privacy.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Advanced Chat Privacy"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "blog.whatsapp.com"
+      },
+      "date": "2025-08",
+      "source_sha256": "13956a5d8fb8b62321eac7e52b6ed7454cbf7ba4fcf233a12898bbf2f61acbe8",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    },
+    {
+      "id": "meta-private-processing-whitepaper",
+      "vendor": "meta",
+      "product": "whatsapp-private-processing",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "whitepaper",
+      "title": "Private Processing for WhatsApp Overview",
+      "summary": "Official Meta technical whitepaper detailing the Private Processing architecture, threat model, and security design.",
+      "canonical_url": "https://ai.meta.com/static-resource/private-processing-technical-whitepaper",
+      "machine_url": "",
+      "handler": "pdf",
+      "raw_targets": [
+        "pdf"
+      ],
+      "render_target": "meta/wiki/sources/meta-private-processing/private-processing-technical-whitepaper.md",
+      "expected": {
+        "status": 200,
+        "required_terms": []
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "ai.meta.com"
+      },
+      "date": "2025-04",
+      "source_sha256": "abdfcba28126e99420083ee94d2d8d784763b4009655a9d0a2bce4408b51656a",
+      "fetched_at": "2026-06-29T21:32:53+00:00"
+    }
+  ],
+  "google": [
+    {
+      "id": "google-private-ai-approach-2024-08",
+      "vendor": "google",
+      "product": "google-private-ai",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "security-blog",
+      "title": "Android's private AI approach",
+      "summary": "Google's articulation of the Android Private Compute Core architecture for on-device AI.",
+      "canonical_url": "https://security.googleblog.com/2024/08/android-private-ai-approach.html",
+      "machine_url": "",
+      "handler": "blogger-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "google/wiki/sources/google-private-ai/android-private-ai-approach.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private AI",
+          "Android"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "security.googleblog.com"
+      },
+      "date": "2024-08",
+      "source_sha256": "d158bcad56505dc3250a0188c825e5dd7cda46214742fbd8266c9a974d62975d",
+      "fetched_at": "2026-06-29T15:17:13+00:00"
+    },
+    {
+      "id": "google-trust-in-transparency-2022-12",
+      "vendor": "google",
+      "product": "google-private-ai",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "security-blog",
+      "title": "Trust in transparency: Private Compute Core",
+      "summary": "Transparency and verifiability principles behind Private Compute Core.",
+      "canonical_url": "https://security.googleblog.com/2022/12/trust-in-transparency-private-compute.html",
+      "machine_url": "",
+      "handler": "blogger-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "google/wiki/sources/google-private-ai/trust-in-transparency-private-compute.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Compute",
+          "transparency"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "security.googleblog.com"
+      },
+      "date": "2022-12",
+      "source_sha256": "a21fc44597e3dec3e93e65a54abbc4a0cdfdaec3ca61bad25d7aaed6f69794d4",
+      "fetched_at": "2026-06-29T15:17:13+00:00"
+    },
+    {
+      "id": "google-introducing-private-compute-2021-09",
+      "vendor": "google",
+      "product": "google-private-ai",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "security-blog",
+      "title": "Introducing Android's Private Compute Core",
+      "summary": "Original introduction of Android Private Compute Core.",
+      "canonical_url": "https://security.googleblog.com/2021/09/introducing-androids-private-compute.html",
+      "machine_url": "",
+      "handler": "blogger-html",
+      "raw_targets": [
+        "html",
+        "images"
+      ],
+      "render_target": "google/wiki/sources/google-private-ai/introducing-androids-private-compute.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Compute"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "security.googleblog.com"
+      },
+      "date": "2021-09",
+      "source_sha256": "a64cfb1d603a7a788e669d33295d01107efb16b08daa311430de40d6d992a76d",
+      "fetched_at": "2026-06-29T15:17:13+00:00"
+    },
+    {
+      "id": "google-private-compute-services-repo",
+      "vendor": "google",
+      "product": "google-private-ai",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "github-repo",
+      "title": "google/private-compute-services",
+      "summary": "Official Google repo for Private Compute Services; companion to Android Private Compute Core.",
+      "canonical_url": "https://github.com/google/private-compute-services",
+      "machine_url": "https://api.github.com/repos/google/private-compute-services",
+      "handler": "github-repo",
+      "raw_targets": [
+        "github-snapshot"
+      ],
+      "render_target": "google/wiki/sources/google-private-ai/google_private-compute-services.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Private Compute"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "github.com"
+      },
+      "date": "",
+      "source_sha256": "4d06f6827b5abe01f37e3245abd8a579abc1f6d42e95691020df8b4dcd7e1a86",
+      "fetched_at": "2026-06-29T15:17:13+00:00"
+    },
+    {
+      "id": "project-oak-repo",
+      "vendor": "google",
+      "product": "google-private-ai",
+      "tier": "official-primary",
+      "evidence_score": 100,
+      "kind": "github-repo",
+      "title": "project-oak/oak",
+      "summary": "Project Oak: Google's framework for building trustworthy, attestation-backed applications.",
+      "canonical_url": "https://github.com/project-oak/oak",
+      "machine_url": "https://api.github.com/repos/project-oak/oak",
+      "handler": "github-repo",
+      "raw_targets": [
+        "github-snapshot"
+      ],
+      "render_target": "google/wiki/sources/google-private-ai/project-oak_oak.md",
+      "expected": {
+        "status": 200,
+        "required_terms": [
+          "Oak"
+        ]
+      },
+      "provenance": {
+        "discovered_by": "manual-seed",
+        "official_domain": "github.com"
+      },
+      "date": "",
+      "source_sha256": "b1b3b7ee4f5f24589c882390ea2bc829f17a4bafe32d0112f0c408db12aa7ac0",
+      "fetched_at": "2026-06-29T15:17:13+00:00"
+    }
+  ]
+}
