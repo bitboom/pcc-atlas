@@ -15,9 +15,16 @@ function runValidate(env = {}) {
   });
 }
 
-test('validate:evidence passes with local corpus and generated-only mode', () => {
+test('validate:evidence passes with local corpus when available and in generated-only mode', () => {
   const local = runValidate();
-  assert.equal(local.status, 0, `${local.stdout}\n${local.stderr}`);
+  const siblingCorpus = join(root, '..', 'pcc-ref');
+  if (existsSync(siblingCorpus)) {
+    assert.equal(local.status, 0, `${local.stdout}\n${local.stderr}`);
+  } else {
+    assert.notEqual(local.status, 0, 'validation without a local corpus should fail unless generated-only mode is explicit');
+    assert.match(`${local.stdout}\n${local.stderr}`, /pcc-ref corpus not found/);
+  }
+
   const generatedOnly = runValidate({ PCC_REF_DIR: join(tmpdir(), 'definitely-missing-pcc-ref'), PCC_ATLAS_ALLOW_MISSING_PCC_REF: '1' });
   assert.equal(generatedOnly.status, 0, `${generatedOnly.stdout}\n${generatedOnly.stderr}`);
 });
